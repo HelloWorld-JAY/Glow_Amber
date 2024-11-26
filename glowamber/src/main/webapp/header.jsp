@@ -17,7 +17,7 @@
 	crossorigin="anonymous"></script>
 </head>
 <header>
-	<div class="container header_background">
+	<div class="container-xxl header_background">
 		<div class="container">
 			<ul class="nav justify-content-end" id="header_nav">
 				<li class="nav-item"><a href="#">회원가입</a></li>
@@ -26,7 +26,18 @@
 				<li class="nav-item">ㅣ</li>
 				<li class="nav-item"><a href="#">장바구니</a></li>
 				<li class="nav-item">ㅣ</li>
-				<li class="nav-item"><a href="#">고객센터 ▼</a></li>
+				<li class="nav-item"><a class="nav-link dropdown-toggle"
+				href="#" 
+                id="customerServiceDropdown" 
+                role="button" 
+                data-bs-toggle="dropdown" 
+                aria-expanded="false">고객센터</a>
+                 <ul class="dropdown-menu" aria-labelledby="customerServiceDropdown">
+                <li><a class="dropdown-item" href="#">공지사항</a></li>
+                <li><a class="dropdown-item" href="#">1:1문의</a></li>
+                <li><a class="dropdown-item" href="#">자주하는질문</a></li>
+            </ul>
+            </li>
 			</ul>
 		</div>
 		<div
@@ -41,14 +52,14 @@
 			</span>
 		</div>
 	</div>
-	<div class="container main_nav ">
+	<div class="container main_nav">
 		<ul class="nav nav-pills nav-fill main_nav_ui">
 		<li class="nav-item"> <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-justify" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5"/>
 </svg>카테고리</a></li>
-		<li class="nav-item">베스트</li>
-		<li class="nav-item">레시피</li>
-		<li class="nav-item">이벤트</li>
+		<li class="nav-item"><a href="#">베스트</a></li>
+		<li class="nav-item"><a href="#">레시피</a></li>
+		<li class="nav-item"><a href="#">이벤트</a></li>
 		</ul>
 	</div>
 </header>
