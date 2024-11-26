@@ -1,62 +1,38 @@
 @charset "UTF-8";
 
 /* 헤더 배경 */
-.header_background {
-	padding: 22px 0px;
-	height: 220px;
-	left: 240px;
-	top: 104px;
-	background: linear-gradient(90deg, #5A5A5A 0%, #3E3E3E 0.01%, #3E3E3E 37%, #5A5A5A
-		61%, #858585 100%);
-	border-radius: 2px;
+.header_background{
+padding: 22px 0px;
+height: 220px;
+left: 240px;
+top: 104px;
+background: linear-gradient(90deg, #5A5A5A 0%, #3E3E3E 0.01%, #3E3E3E 37%, #5A5A5A 61%, #858585 100%);
+border-radius: 2px;
 }
-/* 네비게이션 중 li 글씨 */
-#header_nav>li:nth-child(1), #header_nav>li:nth-child(3), #header_nav>li:nth-child(5)
-	{
-	padding-left: 12px;
-	padding-right: 12px;
-	padding-top: 8px;
-	font-style: normal;
-	font-weight: 500;
-	font-size: 17px;
-	line-height: 19px;
-	color: white;
+
+/* 헤더 네비게이션 */
+/* 네비게이션 중 회원가입 */
+#header_nav > li:first-child{
+padding-left: 10px;
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 19px;
+color: #DEBD7E;
 }
-/* 네비게이션 중 li 글씨 호버 */
-#header_nav>li:nth-child(1):hover, #header_nav>li:nth-child(3):hover,
-	#header_nav>li:nth-child(5):hover, #header_nav>li:nth-child(7):hover {
-	border-radius: 5px;
-	font-weight: 600;
-	color: #DEBD7E;
+
+/* 헤더 네비게이션 */
+/* 네비게이션 중 회원가입 제외 나머지 */
+#header_nav > li{
+margin-top:5px;
+padding-left: 10px;
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 19px;
+color: white;
 }
-/* 네비게이션 중 li 구분자 */
-#header_nav>li:nth-child(2), #header_nav>li:nth-child(4), #header_nav>li:nth-child(6)
-	{
-	padding-top: 8px;
-	font-style: normal;
-	font-weight: 500;
-	font-size: 17px;
-	line-height: 19px;
-	color: white;
-}
-/* 헤더 네비게이션 고객센터*/
-#header_nav>li:last-child {
-	font-style: normal;
-	font-weight: 500;
-	font-size: 17px;
-	line-height: 19px;
-	color: white;
-}
-/* 고객센터 배경 및 글씨색 */
-.dropdown-menu {
-	color: white !important;
-	background-color: #5A5A5A !important
-}
-/* 고객센터 배경 및 글씨색 호버시 */
-.dropdown-item:hover {
-	color: #DEBD7E !important;
-	background-color: #5A5A5A !important
-}
+
 /* 하이퍼링크 밑줄 및 글자색 없애기 */
 a {
 	text-decoration: none !important;
@@ -64,70 +40,55 @@ a {
 }
 
 /* 검색박스 */
-#search_box {
-	margin-top: 65px;
-	align-items: center;
-	padding-left: 15px;
-	width: 450px;
-	height: 60px;
-	border: 3px solid #DEBD7E;
-	border-radius: 8px;
-	background-color: transparent;
+#search_box{
+margin-top:55px;
+align-items: center;
+padding-left: 15px;
+width: 450px;
+height: 60px;
+border: 3px solid #DEBD7E;
+border-radius: 8px;
+background-color: transparent;
 }
 
 /* 검색박스 텍스트박스 */
-#search_box>#search_text_box {
-	font-size: 20px;
-	width: 300px;
-	color: white;
-	background-color: transparent;
-	border: none;
+#search_box > #search_text_box{
+font-size:20px;
+width: 300px;
+color: white;
+background-color: transparent; 
+border: none;
 }
 
 /* 검색박스 텍스트박스 포커스 */
-#search_box>#search_text_box:focus {
-	background-color: transparent;
-	outline: none;
+#search_box > #search_text_box:focus{
+background-color: transparent;
+outline: none; 
 }
 
 /* 돋보기 아이콘 */
-#search_box>a>svg {
+#search_box > a > svg{
 	margin-right: 15px;
-}
+} 
 
 /* 돋보기 아이콘 플레이스홀더 컬러 */
-#search_box>a>svg, #search_box>#search_text_box::placeholder {
+#search_box > a > svg,#search_box > #search_text_box::placeholder{
 	color: white;
 }
 
 /* 로고 & 검색 박스 */
-.header_logo_search {
-	margin-top: 10px;
+.header_logo_search{
+	margin-top: 20px;
 }
 
 /* 로고이미지 사이즈조절 */
-#logo_img {
+#logo_img{
 	width: 440px;
 }
-/* 헤더 메인 네비게이션*/
-.main_nav {
-	border: 1px solid #dddddd;
-	border-radius: 3px;
-	box-shadow: 1px 1px 3px #888888;
-}
-/* 헤더 메인 네비게이션 각 객체 */
-.main_nav_ui>li {
-	padding-top: 10px;
-	padding-bottom: 10px;
+/* 헤더 메인 네비게이션 */
+.main_nav_ui > li{
+	padding-top:10px;
+	padding-bottom:10px;
 	font-weight: 600;
 	font-size: 25px;
-}
-/* 헤더 메인 네비게이션 각 객체 호버시 */
-.main_nav_ui>li:hover {
-	color: #DEBD7E !important;
-}
-/* 헤더 메인 네비게이션 카테고리 */
-.main_nav_ui>li>a>svg {
-	margin-bottom: 8px;
-	margin-right: 2px;
 }
