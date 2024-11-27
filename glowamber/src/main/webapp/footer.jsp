@@ -5,23 +5,31 @@
 <head>
 <meta charset="UTF-8">
 <title>GLOW AMBER</title>
-<link href="resources/css/footer.css" rel="stylesheet">
+<link href="resources/css/Footer.css" rel="stylesheet">
+<!-- 부트스트랩 아이콘CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+<!-- 부트스트랩 CSS -->
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
 	rel="stylesheet"
 	integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
 	crossorigin="anonymous">
+<!-- 부트스트랩 js -->
 <script
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
 	integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
 	crossorigin="anonymous"></script>
-</head>
+<!-- 제이쿼리 -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <body>
 
 </body>
 <footer>
+<div class="container-fluid"><hr /></div>
+
 	<div class="container footer">
-		<hr />
+		
 		<div class="d-flex justify-content-between">
 			<div class="container footer_left">
 				<div>고객센터</div>

@@ -5,19 +5,26 @@
 <head>
 <meta charset="UTF-8">
 <title>GLOW AMBER</title>
-<link href="resources/css/header.css" rel="stylesheet">
+<link href="resources/css/Header.css" rel="stylesheet">
+<!-- 부트스트랩 아이콘CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+<!-- 부트스트랩 CSS -->
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
 	rel="stylesheet"
 	integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
 	crossorigin="anonymous">
+<!-- 부트스트랩 js -->
 <script
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
 	integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
 	crossorigin="anonymous"></script>
+<!-- 제이쿼리 -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <header>
-	<div class="container-xxl header_background">
+	<div class="container header_background">
 		<div class="container">
 			<ul class="nav justify-content-end" id="header_nav">
 				<li class="nav-item"><a href="#">회원가입</a></li>
@@ -54,9 +61,18 @@
 	</div>
 	<div class="container main_nav">
 		<ul class="nav nav-pills nav-fill main_nav_ui">
-		<li class="nav-item"> <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-justify" viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5"/>
-</svg>카테고리</a></li>
+		<li class="nav-item"><a class="nav-link dropdown-toggle"
+				href="#" id="customerServiceDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+				<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-justify" viewBox="0 0 16 16">
+ 				<path fill-rule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5"/>
+				</svg>카테고리</a><ul class="dropdown-menu">
+  <li class="dropdown-submenu"><a class="dropdown-item" href="#">대분류1(추후 DB 통해 더추가)</a>
+   <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">소분류1(추후 DB 통해 더추가)</a></li>
+
+        </ul>
+  </li>
+</ul></li>
 		<li class="nav-item"><a href="#">베스트</a></li>
 		<li class="nav-item"><a href="#">레시피</a></li>
 		<li class="nav-item"><a href="#">이벤트</a></li>
@@ -65,6 +81,20 @@
 </header>
 <body>
 
+<!-- 퀵메뉴 -->
+	<div id="quick_menu">
+		<ul class="nav flex-column">
+			<li class="nav-item"><a class="nav-link active"
+				aria-current="page" href="#"><i class="bi bi-clock-history fs-2"></i> <br />최근 본 상품</a></li>
+			<hr />
+			<li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-bag fs-2"></i> <br />장바구니</a></li>
+			<hr />
+			<li class="nav-item"><a class="nav-link active"
+				aria-current="page" href="#"><i class="bi bi-arrow-up-square fs-2"></i><br />TOP
+			</a></li>
+		</ul>
+	</div>
+	<!-- 퀵메뉴 -->
 
 </body>
 </html>
