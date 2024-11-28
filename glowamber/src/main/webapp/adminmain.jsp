@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <title>Glow Amber</title>
 <!-- css -->
-<link href="resources/css/admin.css" rel="stylesheet">
+<link href="resources/css/Admin.css" rel="stylesheet">
 <!-- 부트스트랩 css -->
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -18,18 +18,18 @@
 <script
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
 	integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-	crossorigin="anonymous"></script>
+	crossorigin="anonymous">
+</script>
+<!-- jquery script -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<!-- script -->
+<script type="text/javascript" src='resources/js/admin.js'></script>
 </head>
 <body>
 	<!-- 헤더 -->
-	<jsp:include page="adminheader.jsp" />
+	<jsp:include page="AdminHeader.jsp" />
 	<!-- 헤더 -->
-	<div class='container-xxl' id='inventory'>
-		<div class='row'>
-			<div class='col text-center' id='tagname'>
-				<span>재고관리</span>
-			</div>
-		</div>
+	<div class='container-xxl' id='inventory' >
 		<div class='row'>
 			<div class='col text-center' id='inventory_data'>
 				<input type='date' id='' value=''  /> - 
@@ -38,17 +38,17 @@
 		</div>
 		<div class='row'>
 			<div class='col text-start'>
-				<input type='button' id='' value='상품등록'  />
-				<input type='button' id='' value='카테고리등록' />
-				<input type='button' id='' value='상품입고' />
+				<input type='button' id='' value='전체'  />
+				<input type='button' id='' value='입고' />
+				<input type='button' id='' value='출고' />
 			</div>
 			<div class='col text-end'>
 				<select id=''>
-					<option value=''>선택안함</option>
-					<option value=''>상품</option>
-					<option value=''>입고</option>
-					<option value=''>출고</option>
-					<option value=''>입/출고</option>
+					<option value=''></option>
+					<option value=''></option>
+					<option value=''></option>
+					<option value=''></option>
+					<option value=''></option>
 				</select>
 				<input type='text' id='' />
 				<input type='button' id='' value='검색' />

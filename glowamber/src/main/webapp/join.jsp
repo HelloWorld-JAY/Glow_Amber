@@ -18,7 +18,7 @@
 </head>
 <body>
 	<!-- 헤더 -->
-	<jsp:include page="header.jsp" />
+	<jsp:include page="Header.jsp" />
 	<!-- 헤더 -->
 	<!-- 회원가입 입력란 -->
 	<div class="container" id="join_membership">
@@ -139,7 +139,7 @@
 	</div>
 
 	<!-- 풋터 -->
-	<jsp:include page="footer.jsp" />
+	<jsp:include page="Footer.jsp" />
 	<!-- 풋터 -->
 </body>
 </html>
