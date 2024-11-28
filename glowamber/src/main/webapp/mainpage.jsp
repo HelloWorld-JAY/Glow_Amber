@@ -30,20 +30,7 @@
 	<!-- 헤더 -->
 	<jsp:include page="Header.jsp" />
 	<!-- 헤더 -->
-	<!-- 퀵메뉴 -->
-	<div id="quick_menu">
-		<ul class="nav flex-column">
-			<li class="nav-item"><a class="nav-link active"
-				aria-current="page" href="#"><i class="bi bi-clock-history fs-2"></i> <br />최근 본 상품</a></li>
-			<hr />
-			<li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-bag fs-2"></i> <br />장바구니</a></li>
-			<hr />
-			<li class="nav-item"><a class="nav-link active"
-				aria-current="page" href="#"><i class="bi bi-arrow-up-square fs-2"></i><br />TOP
-			</a></li>
-		</ul>
-	</div>
-	<!-- 퀵메뉴 -->
+
 
 	<!-- 메인페이지 바디 내용 -->
 	<!-- 메인 캐러샐 이미지 -->

@@ -1,8 +1,0 @@
-diff a/glowamber/src/main/webapp/adminheader.jsp b/glowamber/src/main/webapp/adminheader.jsp	(rejected hunks)
-@@ -6,8 +6,6 @@
- <meta charset="UTF-8">
- <title>Glow Amber</title>
- <!-- css -->
- <link href="resources/css/Admin.css" rel="stylesheet">
- <link href="resources/css/Header.css" rel="stylesheet">
- <!-- 부트스트랩 css -->

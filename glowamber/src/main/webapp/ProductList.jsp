@@ -9,9 +9,7 @@
 <!-- css연결 -->
 <link href="resources/css/ProductList.css" rel="stylesheet">
 <!-- 부트스트랩 아이콘CDN -->
-<link
-	href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
-	rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 <!-- 부트스트랩 CSS -->
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -33,23 +31,8 @@
 	<!-- 헤더 -->
 	<jsp:include page="Header.jsp" />
 	<!-- 헤더 -->
-	<!-- 퀵메뉴 -->
-	<div id="quick_menu">
-		<ul class="nav flex-column">
-			<li class="nav-item"><a class="nav-link active"
-				aria-current="page" href="#"><i class="bi bi-clock-history fs-2"></i>
-					<br />최근 본 상품</a></li>
-			<hr />
-			<li class="nav-item"><a class="nav-link" href="#"><i
-					class="bi bi-bag fs-2"></i> <br />장바구니</a></li>
-			<hr />
-			<li class="nav-item"><a class="nav-link active"
-				aria-current="page" href="#"><i
-					class="bi bi-arrow-up-square fs-2"></i><br />TOP </a></li>
-		</ul>
-	</div>
-	<!-- 퀵메뉴 -->
 
+	
 	<!-- 메인 바디 컨테이너 -->
 	<div class="container text-center" id="body_container">
 		<h2>상품 대분류 카테고리 (클릭하고 들어온 카테고리명)</h2>
@@ -146,10 +129,7 @@
 		<!-- 상품 목록번호 -->
 		<hr />
 		<div id="page_number">
-			<span><a href=""><i class="bi bi-chevron-double-left"></i></a></span><span><a
-				href=""><i class="bi bi-chevron-left"></i></a></span><span><a
-				href=""><i class="bi bi-chevron-right"></i></a></span><span><a
-				href=""><i class="bi bi-chevron-double-right"></i></a></span>
+			<span><a href=""><i class="bi bi-chevron-double-left"></i></a></span><span><a href=""><i class="bi bi-chevron-left"></i></a></span><span><a href=""><i class="bi bi-chevron-right"></i></a></span><span><a href=""><i class="bi bi-chevron-double-right"></i></a></span>
 		</div>
 	</div>
 	<!-- 풋터 -->

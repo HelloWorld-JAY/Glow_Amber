@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>JOIN</title>
-<link href="resources/css/Join.css" rel="stylesheet">
+<link href="resources/css/join.css" rel="stylesheet">
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
 	rel="stylesheet"
@@ -18,7 +18,7 @@
 </head>
 <body>
 	<!-- 헤더 -->
-	<jsp:include page="Header.jsp" />
+	<jsp:include page="header.jsp" />
 	<!-- 헤더 -->
 	<!-- 회원가입 입력란 -->
 	<div class="container" id="join_membership">
@@ -139,7 +139,7 @@
 	</div>
 
 	<!-- 풋터 -->
-	<jsp:include page="Footer.jsp" />
+	<jsp:include page="footer.jsp" />
 	<!-- 풋터 -->
 </body>
 </html>
