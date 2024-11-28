@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>LOGIN</title>
-<link href="resources/css/login.css" rel="stylesheet">
+<link href="resources/css/Login.css" rel="stylesheet">
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
 	rel="stylesheet"
@@ -18,7 +18,7 @@
 </head>
 <body>
 	<!-- 헤더 -->
-	<jsp:include page="header.jsp" />
+	<jsp:include page="Header.jsp" />
 	<!-- 헤더 -->
 
 	<div class="container">
@@ -35,7 +35,7 @@
 	</div>
 
 	<!-- 풋터 -->
-	<jsp:include page="footer.jsp" />
+	<jsp:include page="Footer.jsp" />
 	<!-- 풋터 -->
 </body>
 </html>

@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <title>Glow Amber</title>
 <!-- css -->
-<link href="resources/css/admin.css" rel="stylesheet">
+<link href="resources/css/Admin.css" rel="stylesheet">
 <!-- 부트스트랩 css -->
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -22,7 +22,7 @@
 </head>
 <body>
 	<!-- 헤더 -->
-	<jsp:include page="adminheader.jsp" />
+	<jsp:include page="AdminHeader.jsp" />
 	<!-- 헤더 -->
 	<div class='container-xxl' id='inventory'>
 		<div class='row'>
