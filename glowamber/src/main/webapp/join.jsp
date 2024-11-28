@@ -5,7 +5,11 @@
 <head>
 <meta charset="UTF-8">
 <title>JOIN</title>
-<link href="resources/css/join.css" rel="stylesheet">
+<link href="resources/css/Join.css" rel="stylesheet">
+<!-- 부트스트랩 아이콘CDN -->
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+	rel="stylesheet">
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
 	rel="stylesheet"
@@ -18,7 +22,7 @@
 </head>
 <body>
 	<!-- 헤더 -->
-	<jsp:include page="header.jsp" />
+	<jsp:include page="Header.jsp" />
 	<!-- 헤더 -->
 	<!-- 회원가입 입력란 -->
 	<div class="container" id="join_membership">
@@ -91,55 +95,102 @@
 
 		<div class='container' id="join_agree">
 			<div class="row">
-				<div class="col-2 text-end">이용약관 동의</div>
+				<div class="col-3 text-end">이용약관 동의</div>
 				<div class="col-6">
 					<div class="row">
-						<div class="col-1"></div>
-						<div class="col-9">전체 동의합니다.</div>
-					</div>
-					<div class="row" >
-						<div class="col-1"></div>
-						<div class="col-11" id="fuck">선택항목에 동의하지 않은 경우도 회원가입 및 일반적인 서비스를 이용할 수
-							있습니다.</div>
-					</div>
-					<div class="row">
-						<div class="col-1"></div>
-						<div class="col-6">이용약관 동의(필수)</div>
-						<div class="col-3 text-end"><a href="">약관보기</a></div>
+						<div class="col-1 join_check">
+							<i class="bi bi-check-circle fs-2"></i>
+						</div>
+						<div class="col-9">
+							<div class="join_font">전체 동의합니다.</div>
+						</div>
 					</div>
 					<div class="row">
 						<div class="col-1"></div>
-						<div class="col-6">개인정보 수집, 이용 동의(필수)</div>
-						<div class="col-3 text-end"><a href="">약관보기</a></div>
+						<div class="col-11" id="join_detail">선택항목에 동의하지 않은 경우도 회원가입
+							및 일반적인 서비스를 이용할 수 있습니다.</div>
 					</div>
 					<div class="row">
-						<div class="col-1"></div>
-						<div class="col-6">개인정보 수집, 이용 동의(선택)</div>
-						<div class="col-3 text-end"><a href="">약관보기</a></div>
+						<div class="col-1 join_check">
+							<i class="bi bi-check-circle fs-2"></i>
+						</div>
+						<div class="col-6">
+							<div class="join_d">이용약관 동의(필수)</div>
+						</div>
+						<div class="col-5 text-end">
+							<a href=""><div class="join_about">약관보기</div></a>
+						</div>
 					</div>
 					<div class="row">
-						<div class="col-1"></div>
-						<div class="col-9">무료배송, 할인 쿠폰 등 혜택/정보 수신 동의(선택)</div>
+						<div class="col-1 join_check">
+							<i class="bi bi-check-circle fs-2"></i>
+						</div>
+						<div class="col-6">
+							<div class="join_d">개인정보 수집, 이용 동의(필수)</div>
+						</div>
+						<div class="col-5 text-end">
+							<a href=""><div class="join_about">약관보기</div></a>
+						</div>
 					</div>
 					<div class="row">
-						<div class="col-1"></div>
-						<div class="col-3 text-center">SMS</div>
-						<div class="col-3 text-center">이메일</div>
-						<div class="col-3"></div>
+						<div class="col-1 join_check">
+							<i class="bi bi-check-circle fs-2"></i>
+						</div>
+						<div class="col-6 ">
+							<div class="join_d">개인정보 수집, 이용 동의(선택)</div>
+						</div>
+						<div class="col-5 text-end">
+							<a href=""><div class="join_about">약관보기</div></a>
+						</div>
 					</div>
 					<div class="row">
-						<div class="col-1"></div>
-						<div class="col-9">본인은 만 14세 이상입니다.(필수)</div>
+						<div class="col-1 join_check">
+							<i class="bi bi-check-circle fs-2"></i>
+						</div>
+						<div class="col-9">
+							<div class="join_d">무료배송, 할인 쿠폰 등 혜택/정보 수신 동의(선택)</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-2 text-end">
+							<i class="bi bi-check-circle fs-2"></i>
+						</div>
+						<div class="col-4 join_check">
+							<div class="join_s align-middle">SMS</div>
+						</div>
+						<div class="col-2 text-end">
+							<i class="bi bi-check-circle fs-2"></i>
+						</div>
+						<div class="col-4 join_check">
+							<div class="join_s">이메일</div>
+						</div>
+
+					</div>
+					<div class="row">
+						<div class="col-1 join_check">
+							<i class="bi bi-check-circle fs-2"></i>
+						</div>
+						<div class="col-9">
+							<div class="join_d">본인은 만 14세 이상입니다.(필수)</div>
+						</div>
 					</div>
 				</div>
 			</div>
-
-
+			
 		</div>
+		<!-- 가입하기 버튼 -->
+			<div class="row" id="join_button">
+				<div class="col-2"></div>
+				<div class="col-2"></div>
+				<div class="col-4">
+					<button>가입하기</button>
+				</div>
+				<div class="col-4"></div>
+			</div>
 	</div>
 
 	<!-- 풋터 -->
-	<jsp:include page="footer.jsp" />
+	<jsp:include page="Footer.jsp" />
 	<!-- 풋터 -->
 </body>
 </html>

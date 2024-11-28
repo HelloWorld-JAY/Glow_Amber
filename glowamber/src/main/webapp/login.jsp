@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>LOGIN</title>
-<link href="resources/css/login.css" rel="stylesheet">
+<link href="resources/css/Login.css" rel="stylesheet">
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
 	rel="stylesheet"
@@ -18,24 +18,43 @@
 </head>
 <body>
 	<!-- 헤더 -->
-	<jsp:include page="header.jsp" />
+	<jsp:include page="Header.jsp" />
 	<!-- 헤더 -->
 
-	<div class="container">
+
+	<div class="container" id="login_div">
 		<div>로그인</div>
-		<div>
-			<input type="text" placeholder="아이디를 입력하세요">
-		</div>
-		<div>
-			<input type="text" placeholder="비밀번호를 입력하세요">
-		</div>
-		<div>
-			<label for="id_save"><input type="checkbox">아이디저장</label>   <span><a href="">아이디찾기</a></span> <span>ㅣ</span> <span><a href="">비밀번호찾기</a></span>
-		</div>
+		<form action="">
+			<div>
+				<input type="text" placeholder="아이디를 입력하세요">
+			</div>
+			<div>
+				<input type="text" placeholder="비밀번호를 입력하세요">
+			</div>
+			<div>
+				<label for="id_save"><input type="checkbox">아이디저장</label> <span><a
+					href="">아이디찾기</a></span> <span>ㅣ</span> <span><a href="">비밀번호찾기</a></span>
+			</div>
+			<div>
+				<button>로그인</button>
+			</div>
+			<div>
+				<button>회원가입</button>
+			</div>
+			<div class="container text-center">
+				<div class="row">
+					<div class="col-4">네이버</div>
+					<div class="col-4">카카오</div>
+					<div class="col-4">구글</div>
+				</div>
+			</div>
+
+		</form>
 	</div>
 
+
 	<!-- 풋터 -->
-	<jsp:include page="footer.jsp" />
+	<jsp:include page="Footer.jsp" />
 	<!-- 풋터 -->
 </body>
 </html>

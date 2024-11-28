@@ -22,7 +22,7 @@
 </head>
 <body>
 	<!-- 헤더 -->
-	<jsp:include page="adminheader.jsp" />
+	<jsp:include page="AdminHeader.jsp" />
 	<!-- 헤더 -->
 	<div class='container-xxl' id='inventory'>
 		<div class='row'>
