@@ -1,5 +1,9 @@
 Manifest-Version: 1.0
+<<<<<<< HEAD
 Built-By: ict-15
+=======
+Built-By: ict-22
+>>>>>>> origin/changsin
 Build-Jdk: 11.0.24
 Created-By: Maven Integration for Eclipse
 
