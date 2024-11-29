@@ -6,8 +6,7 @@
 <meta charset="UTF-8">
 <title>Glow Amber</title>
 <!-- css -->
-<link href="resources/css/Admin.css" rel="stylesheet">
-<link href="resources/css/Header.css" rel="stylesheet">
+<link href="resources/css/AdminHeader.css" rel="stylesheet">
 <!-- 부트스트랩 css -->
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -37,11 +36,11 @@
 		</div>
 		<div id='nav' class="container main_nav">
 			<ul class="nav nav-pills nav-fill main_nav_ui">
-				<li class="nav-item"><a href="#">대시보드</a></li>
-				<li class="nav-item"><a href="#">상품관리</a></li>
-				<li class="nav-item"><a href="#">재고관리</a></li>
-				<li class="nav-item"><a href="#">주문관리</a></li>
-				<li class="nav-item"><a href="#">회원관리</a></li>
+				<li class="nav-item">대시보드</li>
+				<li class="nav-item">상품관리</li>
+				<li class="nav-item">재고관리</li>
+				<li class="nav-item">주문관리</li>
+				<li class="nav-item">회원관리</li>
 			</ul>
 		</div>
 	</header>
