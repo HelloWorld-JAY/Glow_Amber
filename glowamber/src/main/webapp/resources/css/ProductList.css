@@ -4,7 +4,7 @@
 #quick_menu {
 	float: left;
 	position: sticky;
-	top: 500px;
+	top: 250px;
 	left: calc(50% + 720px);
 	text-align: center;
 	display: inline-block;
@@ -22,7 +22,6 @@
 	#quick_menu {
 		display: none;
 	}
-
 }
 /* 퀵메뉴 리스트 */
 #quick_menu li {
@@ -42,16 +41,16 @@
 
 /* *************퀵메뉴************ */
 /* 바디 메인 컨테이너 */
-#body_container{
+#body_container {
 	padding: 0 !important;
 }
 /* 상품목록 제목 */
-#body_container > h2{
-	margin-top:100px; 
-	margin-bottom:100px; 
+#body_container>h2 {
+	margin-top: 100px;
+	margin-bottom: 100px;
 }
 /* 소분류 카테고리 박스 */
-#small_cate{
+#small_cate {
 	border: 2px solid #888888;
 	box-shadow: 0px 0px 3px #888888;
 	border-radius: 5px;
@@ -59,32 +58,35 @@
 	font-weight: 600;
 }
 /* 소분류 행별 */
-#small_cate .row{
-	margin-bottom:20px;
-	margin-top:20px; 
+#small_cate .row {
+	margin-bottom: 20px;
+	margin-top: 20px;
 }
 /* 정렬 div */
-#product_array{
-		margin-top: 100px;
+#product_array {
+	margin-top: 100px;
 }
 /* 정렬 ui */
-#product_array > ul{
-	text-align:right;
+#product_array>ul {
+	text-align: right;
 	list-style: none;
 }
 /* 정렬 li 하나씩 전부 */
-#product_array > ul > li{
+#product_array>ul>li {
 	display: inline-block;
 }
 /* 상품 컨테이너 */
-#product_container{
+#product_container {
 	margin-top: 50px;
 }
 /* 상품페이지 번호 */
-#page_number > span{
-	border: 1px solid #888888;
-	border-radius: 1px;
+#page_number>span {
 	font-size: 20px;
 	font-weight: 600;
-	padding: 2px;
+
+}
+
+#page_number>span:hover {
+
+	border-bottom: 1px solid;
 }

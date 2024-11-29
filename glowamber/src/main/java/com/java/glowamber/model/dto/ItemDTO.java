@@ -1,5 +1,20 @@
 package com.java.glowamber.model.dto;
 
-public class ItemDTO {
+import lombok.Data;
 
+@Data
+public class ItemDTO {
+	private Integer itemNum;
+	private Integer samllCateNum;
+	private String 	itemName;
+	private String 	itemUnit;
+	private String 	itemOrigin;
+	private String 	itemVolume;
+	private String 	itemAllErgyinfo;
+	private Integer itemCost;
+	private Integer itemPrice;
+	private String	itemDate;
+	private String	ItemSupplier;
+	private	String	itemThumnail;
+	private String	itemDetail;
 }

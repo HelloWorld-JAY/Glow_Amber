@@ -1,5 +1,10 @@
 package com.java.glowamber.model.dto;
 
-public class SmallCateDTO {
+import lombok.Data;
 
+@Data
+public class SmallCateDTO {
+	private Integer smallCateNum;
+	private Integer bigCateNum;
+	private String smallCateName;
 }
