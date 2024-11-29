@@ -57,7 +57,7 @@
 		<div class='row' id='inventory_table'>
 			<table>
 				<colgroup>
-		            <col width="5%" />
+		            <col width="8%" />
 		            <col width="*"  />
 		            <col width="8%" />
 		            <col width="20%"/>
