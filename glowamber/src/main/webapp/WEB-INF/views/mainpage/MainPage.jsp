@@ -99,7 +99,7 @@
 				<a href="#"> 추천상품(내용은 추후 수정) </a>
 			</h2>
 			<div id="productCarousel" class="carousel slide d-flex align-items-center"
-				data-bs-ride="carousel">
+				>
 				<div class="carousel-inner" id="product_carousel">
 					 
 				</div>

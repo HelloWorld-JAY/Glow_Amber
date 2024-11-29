@@ -19,4 +19,10 @@ public class ProductServiceImpl implements ProductService{
 		return dao.selectProducts();
 	}
 
+	@Override
+	public ItemDTO selectDetail(ItemDTO dto) {
+		
+		return dao.selectDetail(dto);
+	}
+
 }

@@ -20,4 +20,9 @@ public class ProductDAOImpl implements ProductDAO{
 		return mybatis.selectList("ProductDAO.SelectAllProduct");
 	}
 
+	@Override
+	public ItemDTO selectDetail(ItemDTO dto) {
+		return mybatis.selectOne("ProductDAO.SelectDetail",dto);
+	}
+
 }

@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -19,8 +21,13 @@ public class ProductController {
 	@PostMapping("/productAll")
 	@ResponseBody()
 	public List<ItemDTO> selectAllProducts() {
-		
-		System.out.println(service.selectProducts().toString());
+
 		return service.selectProducts();
+	}
+	@GetMapping("selectProductDetail")
+	public String selectProductDetail(ItemDTO dto,Model m) {
+		System.out.println();
+		m.addAttribute("ItemDTO", service.selectDetail(dto));
+		return "products/ProductDetail";
 	}
 }

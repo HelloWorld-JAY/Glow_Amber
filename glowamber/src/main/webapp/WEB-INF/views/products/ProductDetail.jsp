@@ -7,7 +7,7 @@
 <title>PRODUCT</title>
 </head>
 <!-- css연결 -->
-<link href="resources/css/ProductDetail.css" rel="stylesheet">
+<link href="/glowamber/resources/css/ProductDetail.css" rel="stylesheet">
 <!-- 부트스트랩 아이콘CDN -->
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
@@ -27,7 +27,7 @@
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <!-- js파일연결 -->
-<script type="text/javascript" src="resources/js/ProductDetail.js"></script>
+<script type="text/javascript" src="/glowamber/resources/js/ProductDetail.js"></script>
 <body>
 	<!-- 헤더 -->
 	<jsp:include page="../headerfooter/Header.jsp" />

@@ -8,4 +8,6 @@ public interface ProductService {
 
 	public List<ItemDTO> selectProducts();
 	
+	public ItemDTO selectDetail(ItemDTO dto);
+	
 }

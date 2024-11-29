@@ -122,14 +122,11 @@ a {
 	color: white;
 }
 
-/* 로고 & 검색 박스 */
-.header_logo_search {
-	margin-top: 10px;
-}
-
 /* 로고이미지 사이즈조절 */
 #logo_img {
-	width: 440px;
+	position:relative;
+	top:-5%;
+	width: 120%;
 }
 /* 헤더 메인 네비게이션*/
 .main_nav {

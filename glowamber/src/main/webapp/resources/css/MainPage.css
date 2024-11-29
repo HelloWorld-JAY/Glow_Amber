@@ -63,6 +63,7 @@
 	width: 98%;
 	border-radius: 5px; 
 	box-shadow: 0px 0px 3px #888888;
+	cursor: pointer;
 }
 /* 캐러샐 버튼 */
 .carouesl_button button{
@@ -73,27 +74,30 @@
 	box-shadow: 0px 0px 3px #888888;
 	background: white;
 	color: #555555;
-	font-size: 22px;
+	font-size: 18px;
 	letter-spacing: 4px;
+	cursor: pointer;
 }
 /* 캐러샐 상품명*/
 .carouesl_name {
-	font-size: 24px;
+	font-size: 22px;
 	font-weight: 600;
 	color: #555555;
 	text-align: left;
+	cursor: pointer;
 }
 /* 캐러샐 가격*/
 .carouesl_price {
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: 600;
 	color: #555555;
 	text-align: left;
+	cursor: pointer;
 }
 /* 버튼범위 및 버튼 */
 #main_products .carousel-control-prev,#main_products .carousel-control-next {
     position:absolute;
-    top:250px;
+    top:50%;
     width: 50px !important; /* 너비 줄이기 */
     height: 50px; /* 높이 줄이기 */
     border-radius: 50% ;

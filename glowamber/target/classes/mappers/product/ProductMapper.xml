@@ -8,4 +8,10 @@
 		FROM ITEMTABLE
 	</select>
 	
+	<select id="SelectDetail" resultType="ItemDTO" parameterType="ItemDTO">
+		SELECT *
+		FROM ITEMTABLE
+		WHERE itemnum = #{itemNum}
+	</select>
+	
 </mapper>
