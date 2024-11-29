@@ -16,9 +16,11 @@ public class ProductController {
 	@Autowired
 	private ProductService service;
 	
-	@PostMapping("productAll")
-	@ResponseBody
+	@PostMapping("/productAll")
+	@ResponseBody()
 	public List<ItemDTO> selectAllProducts() {
+		
+		System.out.println(service.selectProducts().toString());
 		return service.selectProducts();
 	}
 }

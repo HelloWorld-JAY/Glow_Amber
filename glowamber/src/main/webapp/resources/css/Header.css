@@ -25,7 +25,7 @@ body{
 .header_background {
 	margin:0;
 	padding: 22px;
-	height: 220px;
+	height: 180px;
 	background: linear-gradient(90deg, #5A5A5A 0%, #3E3E3E 0.01%, #3E3E3E 37%, #5A5A5A
 		61%, #858585 100%);
 	border-radius: 2px;
@@ -86,10 +86,10 @@ a {
 
 /* 검색박스 */
 #search_box {
-	margin-top: 65px;
+	margin-top: 30px;
 	align-items: center;
 	padding-left: 15px;
-	width: 400px;
+	width: 30%;
 	height: 60px;
 	border: 3px solid #DEBD7E;
 	border-radius: 8px;
@@ -99,7 +99,7 @@ a {
 /* 검색박스 텍스트박스 */
 #search_box>#search_text_box {
 	font-size: 20px;
-	width: 300px;
+	width: 80%;
 	color: white;
 	background-color: transparent;
 	border: none;

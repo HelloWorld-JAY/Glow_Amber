@@ -98,33 +98,10 @@
 			<h2>
 				<a href="#"> 추천상품(내용은 추후 수정) </a>
 			</h2>
-			<div id="productCarousel" class="carousel slide"
+			<div id="productCarousel" class="carousel slide d-flex align-items-center"
 				data-bs-ride="carousel">
 				<div class="carousel-inner" id="product_carousel">
-					 <div class="carousel-item active">
-						<div class="row">
-							<div class="col-12 col-sm-6 col-md-3">
-								<div class="row">
-									<div class="col-12 col-sm-12 col-md-12 carouesl_img"> <img alt="고구마!" src="/glowamber/resources/imgs/testimgs/채소고구마테스트섬네일.jpeg"> </div>
-									<div class="col-12 col-sm-12 col-md-12 carouesl_button"><button><i class="bi bi-bag"></i> 담기</button></div>
-									<div class="col-12 col-sm-12 col-md-12 carouesl_name" >상품명</div>
-									<div class="col-12 col-sm-12 col-md-12 carouesl_price">상품금액</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="carousel-item">
-						<div class="row">
-							<div class="col-12 col-sm-6 col-md-3">
-								<div class="row">
-									<div class="col-12 col-sm-12 col-md-12">사진</div>
-									<div class="col-12 col-sm-12 col-md-12">담기버튼</div>
-									<div class="col-12 col-sm-12 col-md-12">상품명</div>
-									<div class="col-12 col-sm-12 col-md-12">상품금액</div>
-								</div>
-							</div>
-						</div>
-					</div>
+					 
 				</div>
 
 				<button class="carousel-control-prev" type="button"
