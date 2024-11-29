@@ -24,7 +24,7 @@
 
 }
 .mtom div{
-	/* border:2px solid red; */
+	border:2px solid red;
 }
 
 /* 1:1 문의 헤드 */
@@ -48,6 +48,11 @@
 .mtom_con{
 	padding:10px;
 }
+/*문의 내용 제목*/
+.mtom_con_tit{
+
+	height: ;
+}
 
 /*사진 첨부*/
 .mtom_photo{
@@ -56,7 +61,7 @@
 }
 /*답변 수신 참고 사항*/
 .res_msg{
-	font-size: 13px;
+	font-size: 15px;
 }
 /*답변- 전화번호 체크박스 옆 글 개인정보 수정 패딩*/
 .res_in{
