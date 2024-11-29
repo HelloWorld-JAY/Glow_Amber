@@ -1,7 +1,6 @@
 @charset "UTF-8";
-
-/* div 컨테이너 스타일 */
-.AdminTap{
+/*** 컨테이너 스타일 ***/
+.AdminTab{
 	background-color: #F5F5F5;
     border: 1px solid #DDDDDD;
     border-radius: 8px;
@@ -31,6 +30,7 @@
 
 #Category{
 	margin-left:10px;
+	font-weight: bold;
 }
 
 #OrderInfo{
@@ -38,6 +38,32 @@
 	margin-bottom:0px;
 }
 
+#totalCount{
+	height : 100%;
+    font-size: 16px;
+    border: 1px solid #CCCCCC;
+    background-color: #FFFFFF;
+    border-radius: 0px 0px 10px 10px;
+	overflow-y: auto;
+}
+div>.listTable_store>div{
+	margin-bottom:0px;
+	border-radius: 10px 10px 0px 0px;
+}
+
+/* 고객관리 탭 */
+#MemberInfo{
+	margin-left : 0px;
+	margin-right: 10px;
+}
+#PurchaseList{
+	margin-right: 0px;
+	margin-left : 10px;
+}
+#PurchaseList div.listTable>div{
+	max-height : 320px;
+    min-height : 320px;
+}
 
 /* 테이블 스타일 */
 .infoTable{
@@ -52,19 +78,23 @@
 	text-align: center;
 }
 
+.infoTable tr{
+	width:100%;
+}
 
 .listTable{
-	height :400px;
+	max-height :400px;
 }
 
 .listTable>div{
+	height : 100%;
     font-size: 16px;
     text-align: center;
     border: 1px solid #CCCCCC;
     background-color: #FFFFFF;
     border-radius: 10px;
     max-height : 380px;
-	min-height : 380px;
+    min-height : 380px;
 	overflow-y: auto;
 	margin:10px 0;
 }
@@ -97,9 +127,31 @@
 	background-color: #FFFFFF;
 }
 
+.totalCount {
+	width:100%;
+	border-collapse: collapse;
+}
+
+.totalCount th{
+	background-color: #E0E0E0;
+    color: #333333;
+    font-weight: bold;
+    padding: 10px;
+  
+}
 /* 글씨 스타일 */
+.infoTable input{
+	width:100%;
+}
+#BigCateNum, #SmallCateNum {
+	width:38px;	
+}
+
+#BigCateInput, #SmallCateInput {
+	width:165px;
+}
+
 input[type="text"], input[type="file"], select {
-	/* width: 100%; */
     padding: 5px;
     margin: 5px 5px;
     border: 1px solid #CCCCCC;
