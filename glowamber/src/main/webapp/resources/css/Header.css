@@ -1,6 +1,18 @@
 @charset "UTF-8";
+@font-face {
+    font-family: 'Gyeonggi_Batang_Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2410-3@1.0/Batang_Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+.header{
+	padding:0 !important;
+	box-shadow: 0px 0px 3px #888888;
+	border-radius: 3px;
+}
 /* 헤더 배경 */
 .header_background {
+	margin:0;
 	padding: 22px;
 	height: 220px;
 	background: linear-gradient(90deg, #5A5A5A 0%, #3E3E3E 0.01%, #3E3E3E 37%, #5A5A5A
@@ -14,17 +26,17 @@
 	padding-right: 12px;
 	padding-top: 8px;
 	font-style: normal;
-	font-weight: 500;
 	font-size: 17px;
 	line-height: 19px;
 	color: white;
+	font-family: 'Gyeonggi_Batang_Regular';
 }
 /* 네비게이션 중 li 글씨 호버 */
 #header_nav>li:nth-child(1):hover, #header_nav>li:nth-child(3):hover,
 	#header_nav>li:nth-child(5):hover, #header_nav>li:nth-child(7):hover {
 	border-radius: 5px;
-	font-weight: 600;
 	color: #DEBD7E;
+	font-family: 'Gyeonggi_Batang_Regular';
 }
 /* 네비게이션 중 li 구분자 */
 #header_nav>li:nth-child(2), #header_nav>li:nth-child(4), #header_nav>li:nth-child(6)
@@ -43,6 +55,7 @@
 	font-size: 17px;
 	line-height: 19px;
 	color: white;
+	font-family: 'Gyeonggi_Batang_Regular';
 }
 /* 고객센터 배경 및 글씨색 */
 #header_nav>li:last-child .dropdown-menu {
@@ -65,7 +78,7 @@ a {
 	margin-top: 65px;
 	align-items: center;
 	padding-left: 15px;
-	width: 450px;
+	width: 400px;
 	height: 60px;
 	border: 3px solid #DEBD7E;
 	border-radius: 8px;
@@ -79,6 +92,7 @@ a {
 	color: white;
 	background-color: transparent;
 	border: none;
+	font-family: 'Gyeonggi_Batang_Regular';
 }
 
 /* 검색박스 텍스트박스 포커스 */
@@ -110,18 +124,18 @@ a {
 .main_nav {
 	border: 1px solid #dddddd;
 	border-radius: 3px;
-	box-shadow: 0px 0px 3px #888888;
+	font-family: 'Gyeonggi_Batang_Regular';
 }
 /* 헤더 메인 네비게이션 카테고리 */
 .main_nav_ui>li:first-child {
 	padding-top: 3px;
-	font-weight: 600;
+	font-weight: 900;
 	font-size: 25px;
 }
 /* 헤더 메인 네비게이션 카테고리제외  */
 .main_nav_ui>li:not(:first-child) {
 	padding-top: 11px;
-	font-weight: 600;
+	font-weight: 900;
 	font-size: 25px;
 }
 /* 헤더 메인 네비게이션 각 객체 카테고리 */
@@ -135,14 +149,15 @@ a {
 }
 /* 헤더 메인 네비게이션 카테고리 아이콘 */
 .main_nav_ui>li>a>svg {
-	margin-bottom: 6px;
-	margin-right: 2px;
+	margin-bottom: 2px;
+	margin-right: 4px;
 }
 /* 카테고리 드롭바 */
 .main_nav .dropdown-menu {
-	width: 26%;
+	width: 400px;
 	box-sizing: border-box;
 	font-size: 20px;
+	box-shadow: 0 0 3px #888888;
 }
 /* 카테고리 드롭바 호버시 */
 .main_nav .dropdown-menu>li:hover {
@@ -158,11 +173,12 @@ a {
 }
 /* 드롭다운 서브메뉴 우측으로나오게 */
 .dropdown-submenu .dropdown-menu {
-	top: -9px;
-	left: 100%;
-	width: auto;
+	top:0;
+	left: 101%;
+	width: 300px;
 	margin-top: 0;
 	margin-left: 0;
+	border: 1px solid #dddddd;
 }
 /* 드롭다운 서브메뉴 호버시 나오게 */
 .dropdown-submenu:hover > .dropdown-menu {

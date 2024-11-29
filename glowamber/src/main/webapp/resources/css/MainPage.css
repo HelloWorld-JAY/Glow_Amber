@@ -1,5 +1,13 @@
 @charset "UTF-8";
 
+@font-face {
+	font-family: 'GowunDodum-Regular';
+	src:
+		url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
 /* *************퀵메뉴************ */
 /* 퀵메뉴 */
 #quick_menu {
@@ -23,7 +31,6 @@
 	#quick_menu {
 		display: none;
 	}
-
 }
 /* 퀵메뉴 리스트 */
 #quick_menu li {
@@ -42,7 +49,9 @@
 }
 
 /* *************퀵메뉴************ */
-
+body{
+	font-family: GowunDodum-Regular !important;
+}
 /* 바디 컨테이너 */
 #body_container {
 	padding: 0 !important;

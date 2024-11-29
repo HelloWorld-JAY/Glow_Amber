@@ -8,7 +8,9 @@
 <!-- css연결 -->
 <link href="resources/css/MainPage.css" rel="stylesheet">
 <!-- 부트스트랩 아이콘CDN -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+	rel="stylesheet">
 <!-- 부트스트랩 CSS -->
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -26,21 +28,26 @@
 <!-- js파일연결 -->
 <script type="text/javascript" src="resources/js/MainPage.js"></script>
 </head>
-<body>
+<header>
 	<!-- 헤더 -->
 	<jsp:include page="Header.jsp" />
 	<!-- 헤더 -->
+</header>
+<body>
+
 	<!-- 퀵메뉴 -->
 	<div id="quick_menu">
 		<ul class="nav flex-column">
 			<li class="nav-item"><a class="nav-link active"
-				aria-current="page" href="#"><i class="bi bi-clock-history fs-2"></i> <br />최근 본 상품</a></li>
+				aria-current="page" href="#"><i class="bi bi-clock-history fs-2"></i>
+					<br />최근 본 상품</a></li>
 			<hr />
-			<li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-bag fs-2"></i> <br />장바구니</a></li>
+			<li class="nav-item"><a class="nav-link" href="#"><i
+					class="bi bi-bag fs-2"></i> <br />장바구니</a></li>
 			<hr />
 			<li class="nav-item"><a class="nav-link active"
-				aria-current="page" href="#"><i class="bi bi-arrow-up-square fs-2"></i><br />TOP
-			</a></li>
+				aria-current="page" href="#"><i
+					class="bi bi-arrow-up-square fs-2"></i><br />TOP </a></li>
 		</ul>
 	</div>
 	<!-- 퀵메뉴 -->
@@ -187,8 +194,11 @@
 
 	<!-- 메인 상품 -->
 	<!-- 메인페이지 바디 내용 -->
+
+</body>
+<footer>
 	<!-- 풋터 -->
 	<jsp:include page="Footer.jsp" />
 	<!-- 풋터 -->
-</body>
+</footer>
 </html>
