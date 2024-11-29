@@ -5,6 +5,17 @@
     font-weight: 400;
     font-style: normal;
 }
+@font-face {
+	font-family: 'GowunDodum-Regular';
+	src:
+		url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+body{
+	font-family: GowunDodum-Regular !important;
+}
 .header{
 	padding:0 !important;
 	box-shadow: 0px 0px 3px #888888;
