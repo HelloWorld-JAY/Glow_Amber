@@ -82,9 +82,7 @@
 									</div>
 								</div>
 								<div class="row">
-								<div class="col-12">
 									<button class="photo_btn">사진 첨부</button>
-									</div>
 									<div class="mtom_photo">
 										-30MB 이하의 이미지만 업로드 가능합니다.<br /> -상품과 무관한 내용이거나 음란 및 불법적인 내용은
 										통보없이 삭제 될 수 있습니다.<br /> -사진은 최대 8장까지 등록가능합니다.<br />
