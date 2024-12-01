@@ -3,7 +3,7 @@ $(function(){
 	// 최초 대분류 카테고리 에이젝스 통신
 	$.ajax({
 		type:'post',
-		url:'../selectbigcate',
+		url:'/glowamber/selectbigcate',
 		dataType:'json',
 		success: function(result){
 			let bigCateLi = $('<li class="dropdown-submenu"><a class="dropdown-item text-center" href="#"></a></li>')
@@ -17,7 +17,7 @@ $(function(){
 		$.ajax({
 			data:{bigCateNum:$(this).val()},
 			type:'post',
-			url:'../selectsmallcate',
+			url:'/glowamber/selectsmallcate',
 			dataType:'json',
 			success: function(result){
 				let smallCateUl = $('<ul class="dropdown-menu"/>');

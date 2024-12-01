@@ -40,6 +40,7 @@
 }
 
 /* *************퀵메뉴************ */
+
 /* 바디 컨테이너 */
 #body_container {
 	margin-top: 50px;
@@ -62,17 +63,32 @@
 	width: 100%;
 	border-radius: 8px;
 }
+#product_detail{
+	padding-left: 6%;
+}
 /* 상품갯수 조절 div */
 #product_counter>div {
 	display: inline-block;
-	border: 1px solid #888888;
-	border-radius: 1px;
+	border: 1px solid #aaaaaa;
+	border-radius: 2px;
+	box-shadow: 0 0 1px #aaaaaa;
+	user-select: none; 
+	font-size: 18px;
 }
 /* 상품갯수 조절 중간 패딩 */
-#product_counter span {
+#product_counter span:nth-last-of-type(2) {
 	display: inline-block;
-	padding-left: 6px;
-	padding-right: 6px;
+	padding-left: 10px;
+	padding-right: 10px;
+	
+}
+/* 상품갯수 조절 중간 패딩 */
+#product_counter span:nth-last-of-type(1),#product_counter span:nth-last-of-type(3) {
+	display: inline-block;
+	padding-left: 5px;
+	padding-right: 5px;
+	cursor: pointer;
+	
 }
 /* 상품갯수 조절 중간 라인 */
 #product_counter span:nth-of-type(3) {
@@ -81,7 +97,6 @@
 }
 /* 상품갯수 조절 중간 라인 */
 #product_counter span:nth-of-type(1) {
-	display: inline-block;
 	border-right: 1px solid #888888;
 }
 /* 장바구니 담기 버튼 */
@@ -90,12 +105,14 @@
 	width: 400px;
 	height: 60px;
 	background-color: #5A5A5A;
+	border: 1px solid #5A5A5A;
 	border-radius: 4px;
 	font-weight: 700;
 	font-size: 26px;
 	text-align: center;
 	letter-spacing: 3px;
 	color: #F8DE8B;
+	box-shadow: 0 0 3px #222222
 }
 /* 설명 제목 폰트 조절 */
 .font_title{

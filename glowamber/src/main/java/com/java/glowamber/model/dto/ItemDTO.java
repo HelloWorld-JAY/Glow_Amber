@@ -5,7 +5,7 @@ import lombok.Data;
 @Data
 public class ItemDTO {
 	private Integer itemNum;
-	private Integer samllCateNum;
+	private Integer smallCateNum;
 	private String 	itemName;
 	private String 	itemUnit;
 	private String 	itemOrigin;

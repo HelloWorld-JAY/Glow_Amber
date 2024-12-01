@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,7 +29,9 @@
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <!-- js파일연결 -->
-<script type="text/javascript" src="/glowamber/resources/js/ProductDetail.js"></script>
+<script type="text/javascript"
+	src="/glowamber/resources/js/ProductDetail.js"></script>
+
 <body>
 	<!-- 헤더 -->
 	<jsp:include page="../headerfooter/Header.jsp" />
@@ -54,16 +58,18 @@
 		<div class="container" id="product_container">
 			<div class="row">
 				<div class="col-5 text-center" id="product_img">
-					<img alt="상품관련사진" src="resources/imgs/testimgs/상품상세_테스트.jpg">
+					<img alt="상품관련사진" src="${itemDTO.itemThumnail}">
 				</div>
 				<div class="col-7" id="product_detail">
 					<div class="row">
 						<div class="col-12">
-							<h2 style="font-weight: 600;">[이연복의 목란]짬뽕 2인분</h2>
+							<h2 style="font-weight: 600;">${ itemDTO.itemName }</h2>
 						</div>
 						<br />
 						<div class="col-12">
-							<h3 style="color: #888888;">[25%] 10,350원</h3>
+							<h3 style="color: #888888;">
+								<fmt:formatNumber value="${itemDTO.itemPrice}" type="number"
+									groupingUsed="true" />원</h3>
 						</div>
 						<br /> <br /> <br /> <br />
 						<hr />
@@ -71,61 +77,63 @@
 							<span class="font_title">판매단위</span>
 						</div>
 						<div class="col-9">
-							<span class="font_content">1팩</span>
+							<span class="font_content">${ itemDTO.itemUnit }</span>
 						</div>
 						<hr />
 						<div class="col-3">
 							<span class="font_title">용량/중량</span>
 						</div>
 						<div class="col-9">
-							<span class="font_content">1.46kg</span>
+							<span class="font_content">${ itemDTO.itemVolume }</span>
 						</div>
 						<hr />
 						<div class="col-3">
 							<span class="font_title">원산지</span>
 						</div>
 						<div class="col-9">
-							<span class="font_content">상품설명/상세정보 참조</span>
+							<span class="font_content">${ itemDTO.itemOrigin }</span>
 						</div>
 						<hr />
-						<div class="col-3">
-							<span class="font_title">알레르기정보</span>
-						</div>
-						<div class="col-9">
-							<span class="font_content">- 목란 중화면: 밀 함유 <br>- 이 제품은
-								대두, 메밀, 우유, 알류를 사용한 제품과 같은 제조시설에서 제조하고 있습니다. <br>- 목란 짬뽕탕
-								마일드: 오징어, 조개류(굴, 홍합), 쇠고기, 닭고기, 돼지고기, 우유, 대두 밀 함유 <br>- 이
-								제품은 알류, 메밀, 땅콩, 고등어, 게, 새우, 복숭아, 토마토, 아황산류, 호두, 조개류(전복), 잣을 포함한
-								제품과 같은 제조시설에서 제조하고 있습니다. <br>- 목란 짬뽕탕 오리지널: 오징어, 돼지고기,
-								조개류(굴, 홍합), 닭고기, 쇠고기, 대두, 우유, 밀 함유 <br>- 이 제품은 알류, 메밀, 땅콩,
-								고등어, 게, 새우, 복숭아, 토마토, 아황산류, 호두, 조개류(전복), 잣을 포함한 제품과 같은 제조시설에서
-								제조하고 있습니다.
-							</span>
-						</div>
-						<hr />
+						<c:if test="${ itemDTO.itemAllErgyinfo != null }">
+							<div class="col-3">
+								<span class="font_title">알레르기정보</span>
+							</div>
+							<div class="col-9">
+								<span class="font_content">${ itemDTO.itemAllErgyinfo } </span>
+							</div>
+							<hr />
+						</c:if>
+						<c:if test="${ itemDTO.itemAllErgyinfo == null }">
+							<div class="col-3">
+								<span class="font_title">알레르기정보</span>
+							</div>
+							<div class="col-9">
+								<span class="font_content">상품설명/상세정보 참조</span>
+							</div>
+							<hr />
+						</c:if>
 						<div class="col-3">
 							<span class="font_title">상품</span>
 						</div>
 						<div class="col-9">
-							<span class="font_title">[이연복의 목란]짬뽕 2인분</span>
+							<span class="font_title">${ itemDTO.itemName }</span>
 						</div>
 						<br /> <br />
 						<div class="col-3"></div>
-						<div class="col-6" id="product_counter">
+						<div class="col-6 align-self-center" id="product_counter">
 							<div>
-								<span><a href="#"><i class="bi bi-dash"></i></a></span><span>0</span><span><a
-									href="#"><i class="bi bi-plus"></i></a></span>
+								<span><i class="bi bi-dash fs-5"></i></span><span draggable="false">0</span><span><i class="bi bi-plus fs-5"></i></span>
 							</div>
 						</div>
 						<div class="col-3 text-end">
-							<span class="font_content"
-								style="display: inline-block; margin-top: 8px;">10,350원</span>
+							<span class="font_content" id='product_price'
+								style="display: inline-block; margin-top: 8px;" value="${ itemDTO.itemPrice }"><fmt:formatNumber value="${itemDTO.itemPrice}" type="number"
+									groupingUsed="true" />원</span>
 						</div>
 
 						<hr />
 						<div class="col-12 text-end">
-							<span class="font_title">총 상품금액:</span> <span
-								style="font-size: 30px; font-weight: 600;">0원</span>
+							<span class="font_title">총 상품금액:</span> <span id="total_price" style="font-size: 30px; font-weight: 600;">0원</span>
 						</div>
 						<div class="col-12 text-end">
 							<button id="product_add">장바구니 담기</button>
@@ -144,9 +152,7 @@
 			<div class="row text-center detail_img">
 				<div class="col-12">
 					<img style="width: 100%;" alt="상품상세설명"
-						src="resources/imgs/testimgs/상품상세설명_테스트1.jpg"> <img
-						style="width: 100%;" alt="상품상세설명"
-						src="resources/imgs/testimgs/상품상세설명_테스트.jpg">
+						src="${itemDTO.itemDetail}">
 				</div>
 			</div>
 		</div>
@@ -159,7 +165,7 @@
 					<a href="">추천순</a> <span>l</span> <a href="">최근등록순</a>
 				</div>
 			</div>
-			<hr/>
+			<hr />
 			<div class="row">
 				<div class="col-3 text-center">사용자명</div>
 				<div class="col-9">댓글 내용입니다요잉 추후에 for문으로 여럿출력예쩡</div>
@@ -177,7 +183,7 @@
 				</div>
 				<div class="col-6 text-end">
 					<button id="q_button">문의하기</button>
-					
+
 				</div>
 			</div>
 			<hr />
@@ -187,22 +193,22 @@
 				<div class="col-1 text-center borad_header">작성일</div>
 				<div class="col-1 text-center borad_header">답변상태</div>
 			</div>
-			<hr/>
+			<hr />
 			<div class="row">
 				<div class="col-8 text-center borad_content">이곳에 제목이 작성될것임다</div>
 				<div class="col-2 text-center borad_content">홍길동이요</div>
 				<div class="col-1 text-center borad_content">오늘이요</div>
 				<div class="col-1 text-center borad_content">답변대기</div>
-				
+
 			</div>
-			<hr/>
+			<hr />
 			<div class="row">
 				<div class="col-8 text-center borad_content">이곳에 제목이 작성될것임다</div>
 				<div class="col-2 text-center borad_content">홍길동이요</div>
 				<div class="col-1 text-center borad_content">오늘이요</div>
 				<div class="col-1 text-center borad_content">답변완료</div>
 			</div>
-			<hr/>
+			<hr />
 			<div class="col-12 text-center" id="reply_page_button">
 				<a href=""><i class="bi bi-chevron-left fs-3"></i></a> <a href=""><i
 					class="bi bi-chevron-right fs-3"></i></a>

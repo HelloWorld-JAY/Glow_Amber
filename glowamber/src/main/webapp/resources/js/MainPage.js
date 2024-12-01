@@ -32,9 +32,9 @@ $(function(){
 				}
 		}//function end
 	});//ajax end
-
 	
 	$('#product_carousel').on('click','.carouesl_img,.carouesl_name,.carouesl_price',function(){
-		location = '../selectProductDetail?itemNum='+$('.carouesl_img').attr('value');
+	
+		location = '../selectProductDetail?itemNum='+$(this).attr('value');
 		});
 });

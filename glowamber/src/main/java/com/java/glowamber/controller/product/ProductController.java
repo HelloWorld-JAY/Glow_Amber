@@ -26,8 +26,8 @@ public class ProductController {
 	}
 	@GetMapping("selectProductDetail")
 	public String selectProductDetail(ItemDTO dto,Model m) {
-		System.out.println();
-		m.addAttribute("ItemDTO", service.selectDetail(dto));
+		System.out.println(service.selectDetail(dto).toString());
+		m.addAttribute("itemDTO", service.selectDetail(dto));
 		return "products/ProductDetail";
 	}
 }
