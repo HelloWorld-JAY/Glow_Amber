@@ -24,6 +24,7 @@
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <!-- script -->
 <script type="text/javascript" src='/glowamber/resources/js/Admin/Admin.js'></script>
+<script type="text/javascript" src='/glowamber/resources/js/Admin/ItemTab.js'></script>
 </head>
 <body>
 	<!-- 헤더 -->
@@ -98,10 +99,10 @@
 						</div>
 					</div>
 					<div class='text-end'>
-						<input type='button' name='' id='' value='등록' /> 
-						<input type='button' name='' id='' value='취소' /> 
-						<input type='button' name='' id='' value='수정' /> 
-						<input type='button' name='' id='' value='삭제' />
+						<input type='button' name='' id='ItemInsertBtn' value='등록' /> 
+						<input type='button' name='' id='ItemInsertCancle' value='취소' /> 
+						<input type='button' name='' id='ItemUpdateBtn' value='수정' />
+						<input type='button' name='' id='ItemDeleteBtn' value='삭제' />
 					</div>
 				</div>
 			
@@ -109,80 +110,102 @@
 				<div id='Category' class='col containBorder'>
 					<div class='row text-center'>
 						<div class='col'>
-							<span>대분류</span>
-						</div>
-						<div class='col'>
-							<span>소분류</span>
+							<span>카테고리</span>
 						</div>
 					</div>
 					<div class='row' id='cate'>
+					<!-- 대분류 카테고리 리스트 -->
 						<div class='col listTable'>
 							<div>
-								<table class='text-center'>
+								<table class='cate text-center' id='BigCateList'>
 									<colgroup>
 							            <col width="30%" />
 							            <col width="*"  />
 					      			</colgroup>
 									<tr>
-										<th>번호</th>
-										<th>이름</th>
+										<th>대분류</th>							
 									</tr>
-									
-									<!-- DB에 저장된 값 출력 -->
-									
 								</table>
 							</div>
 						</div>
+						<!-- 소분류 카테고리 리스트 -->
 						<div class='col listTable'>
 							<div>
-								<table class='cate text-center' >
+
+								<table class='cate text-center' id='SmallCateList'>
 									<colgroup>
 							            <col width="30%" />
 							            <col width="*"  />
 					      			</colgroup>
 									<tr>
-										<th>번호</th>
-										<th>이름</th>
-										
-										<!-- DB에 저장된 값 출력 -->
-										
+										<th>소분류</th>						
 									</tr>
 								</table>
 							</div>
 						</div>
 					</div>
-					<div class='row text-end'>
+					<div class='row text-start'>
 						<div class='col'>
-							<table>
+						<!-- 카테고리 입력 테이블 -->
+							<table id='cateInsert'>
 								<tr>
-									<td>번호</td>
-									<td><input type='text' id='BigCateNum' readonly /></td>
-									<td>이름</td>
-									<td><input type='text' id='BigCateInput' /></td>
+									<td>분류</td>
+									<td>
+										<select id='InsertCateType'>
+											<option value='big'>대분류</option>
+											<option value='small'>소분류</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td>대분류</td>
+									<td>
+										<select id='SelectBigCate'>
+											<option value=1>대분류</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td>카테고리 명</td>
+									<td><input type='text' id='InsertCateName' /></td>
 								</tr>
 							</table>
 						</div>
 						<div class='col'>
-							<table>
+						<!-- 카테고리 수정 테이블 -->
+							<table id='cateUpdate'>
 								<tr>
 									<td>번호</td>
-									<td><input type='text' id='SmallCateNum' readonly/></td>
-									<td>이름</td>
-									<td><input type='text' id='SmallCateInput' /></td>
+									<td><input type='text' id='CateNum' readonly/></td>
+								</tr>
+								<tr>
+									<td>분류</td>
+									<td>
+										<input type='text' id='UpdateCateType' readonly>
+									</td>
+								</tr>
+								<tr>
+									<td>대분류 명</td>
+									<td>
+										<input type='hidden' id='BigCateNum' >
+										<input type='text' id='UpdateBigCateName' readonly>
+									</td>
+								</tr>
+								<tr>
+									<td>카테고리 명</td>
+									<td><input type='text' id='UpdateCateName' /></td>
 								</tr>
 							</table>
 						</div>
 					</div>
 					<div class='row text-center'>
 						<div class='col'>
-							<input type='button' id='BigCateAdd' value='등록' /> 
-							<input type='button' id='BigCateClear' value='취소' /> 
-							<input type='button' id='BigCateDelete' value='삭제' />
+							<input type='button' id='CateInsertBtn' value='등록' /> 
+							<input type='button' id='CateInsertCancle' value='취소' />  
 						</div>
 						<div class='col'>
-							<input type='button' id='SmallCateInsert' value='등록' /> 
-							<input type='button' id='SmallCateclear' value='취소' />  
-							<input type='button' id='SmallCateDelete' value='삭제' />
+							<input type='button' id='CateUpdateBtn' value='수정' /> 
+							<input type='button' id='CateUpdateCancle' value='취소' />  
 						</div>
 					</div>
 				</div>
