@@ -46,16 +46,32 @@
 }
 /* 상품목록 제목 */
 #body_container>h2 {
-	margin-top: 100px;
-	margin-bottom: 100px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	font-size: 40px;
+	font-weight: 600;
 }
 /* 소분류 카테고리 박스 */
 #small_cate {
 	border: 2px solid #888888;
-	box-shadow: 0px 0px 3px #888888;
+	box-shadow: 0px 0px 2px #aaaaaa;
 	border-radius: 5px;
-	font-size: 20px;
+	color: #444;
+	font-size: 16px;
 	font-weight: 600;
+	line-height: 50px;
+}
+/* 소분류 카테고리들 */
+.smallcate{
+	cursor: pointer;
+}
+/* 소분류 카테고리들 호버시*/
+.smallcate:hover{
+	color: #DEBD7E;
+}
+/* 소분류 카테고리 열려있음 */
+.smallcate_active{
+	color: #DEBD7E;
 }
 /* 소분류 행별 */
 #small_cate .row {
@@ -85,8 +101,51 @@
 	font-weight: 600;
 
 }
-
+/*  */
 #page_number>span:hover {
 
 	border-bottom: 1px solid;
+}
+/* 상품 간격 */
+#product_four{
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+/* 상품 이미지 */
+.carouesl_img img{
+	height: 100%;
+	width: 98%;
+	border-radius: 5px; 
+	box-shadow: 0px 0px 3px #888888;
+	cursor: pointer;
+}
+/* 상품 버튼 */
+.carouesl_button button{
+	border: none;
+	margin-top: 16px;
+	margin-bottom: 8px;
+	width: 98.2%;
+	border-radius: 2px; 
+	box-shadow: 0px 0px 3px #888888;
+	background: white;
+	color: #555555;
+	font-size: 18px;
+	letter-spacing: 4px;
+	cursor: pointer;
+}
+/* 상품 상품명*/
+.carouesl_name {
+	font-size: 18px;
+	font-weight: 600;
+	color: #555555;
+	text-align: left;
+	cursor: pointer;
+}
+/* 상품 가격*/
+.carouesl_price {
+	font-size: 16px;
+	font-weight: 600;
+	color: #555555;
+	text-align: left;
+	cursor: pointer;
 }

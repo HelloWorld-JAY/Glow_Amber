@@ -6,6 +6,7 @@ import lombok.Data;
 public class ItemDTO {
 	private Integer itemNum;
 	private Integer smallCateNum;
+	private Integer bigCateNum;
 	private String 	itemName;
 	private String 	itemUnit;
 	private String 	itemOrigin;

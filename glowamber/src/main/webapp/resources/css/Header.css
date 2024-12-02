@@ -165,7 +165,7 @@ a {
 /* 헤더 메인 네비게이션 각 객체 카테고리 제외 */
 .main_nav_ui>li:not(:first-child):hover {
 	color: #DEBD7E !important;
-	text-decoration: underline;
+
 }
 /* 헤더 메인 네비게이션 카테고리 아이콘 */
 .main_nav_ui>li>a>svg {

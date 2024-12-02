@@ -20,7 +20,7 @@ CREATE TABLE itemtable 		 		-- 상품테이블
 CREATE TABLE membertable			--	회원테이블
 (
 	membernum 		NUMBER					-- 회원번호   (pk)
-	,memberid		varchar2 (100)	NOT NULL 		-- 회원아이디
+	,memberid		varchar2 (100)	NOT NULL UNIQUE		-- 회원아이디
 	,memberpass		varchar2 (100)	NOT NULL 		-- 회원비밀번호
 	,membername		varchar2 (100)	NOT NULL 		-- 회원이름
 	,membertel		varchar2 (100)	NOT NULL 		-- 회원전화번호
@@ -106,11 +106,12 @@ CREATE TABLE noticetable			-- 게시판테이블
 CREATE TABLE carttable		-- 장바구니
 (
 	cartnum		NUMBER				-- 장바구니 번호
-	,membernum	NUMBER				-- 회원번호
+	,memberid		varchar2 (100)	-- 회원아이디
 	,itemnum		NUMBER				-- 상품번호
 	,cartitemcount	NUMBER	DEFAULT 1 NOT NULL 	-- 상품개수
+	,cartadddate 	date			-- 카트 추가한날짜(쓰레기 삭제용)
 	,CONSTRAINT pk_cart_cartnum PRIMARY KEY (cartnum)
-	,CONSTRAINT fk_cart_membernum FOREIGN KEY (membernum) REFERENCES membertable(membernum)
+	,CONSTRAINT fk_cart_memberId FOREIGN KEY (memberid) REFERENCES membertable(memberid)
 	,CONSTRAINT fk_cart_itemnum FOREIGN KEY (itemnum) REFERENCES itemtable(itemnum)
 );
 

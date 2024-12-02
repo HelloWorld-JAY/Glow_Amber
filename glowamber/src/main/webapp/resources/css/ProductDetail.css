@@ -127,6 +127,13 @@
 	
 }
 /*******************************************************상품상세페이지 */
+/* 상품상세버튼 박스 */
+#detail_box{
+	position: sticky;
+	top:59px;
+	background: #f1f1f1;
+	cursor: pointer;
+}
 /* 상품상세 컨테이너 */
 #detail_container{
 	margin-top: 100px;
@@ -135,7 +142,24 @@
 .detail_button{
 	padding-bottom:15px;
 	padding-top:15px;
-	border: 1px solid #5A5A5A;
+ 	border: 1px solid #5A5A5A;
+	font-size: 20px;
+	font-weight: 500;
+	color: #5A5A5A;
+}
+.detail_button:nth-child(2){
+	padding-bottom:15px;
+	padding-top:15px;
+ 	border-left: none;
+ 	border-right: none;
+	font-size: 20px;
+	font-weight: 500;
+	color: #5A5A5A;
+}
+.detail_button:nth-child(3){
+	padding-bottom:15px;
+	padding-top:15px;
+ 	border-right: none;
 	font-size: 20px;
 	font-weight: 500;
 	color: #5A5A5A;

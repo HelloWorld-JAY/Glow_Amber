@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,7 +9,7 @@
 <title>PRODUCT</title>
 </head>
 <!-- css연결 -->
-<link href="resources/css/ProductList.css" rel="stylesheet">
+<link href="/glowamber/resources/css/ProductList.css" rel="stylesheet">
 <!-- 부트스트랩 아이콘CDN -->
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
@@ -27,7 +29,8 @@
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <!-- js파일연결 -->
-<script type="text/javascript" src="resources/js/ProductList.js"></script>
+<script type="text/javascript"
+	src="/glowamber/resources/js/ProductList.js"></script>
 </head>
 <body>
 	<!-- 헤더 -->
@@ -36,58 +39,29 @@
 	<!-- 퀵메뉴 -->
 	<div id="quick_menu">
 		<ul class="nav flex-column">
-			<li class="nav-item"><a class="nav-link active"
-				aria-current="page" href="#"><i class="bi bi-clock-history fs-2"></i>
-					<br />최근 본 상품</a></li>
+			<li class="nav-item"><a class="nav-link" aria-current="page"
+				href="#"><i class="bi bi-clock-history fs-2"></i> <br />최근 본 상품</a></li>
 			<hr />
-			<li class="nav-item"><a class="nav-link" href="#"><i
-					class="bi bi-bag fs-2"></i> <br />장바구니</a></li>
+			<li class="nav-item"><a class="nav-link"
+				href="/glowamber/products/Cart"><i class="bi bi-bag fs-2"></i> <br />장바구니</a></li>
 			<hr />
-			<li class="nav-item"><a class="nav-link active"
-				aria-current="page" href="#"><i
-					class="bi bi-arrow-up-square fs-2"></i><br />TOP </a></li>
+			<li class="nav-item"><a class="nav-link" aria-current="page"
+				href="#"><i class="bi bi-arrow-up-square fs-2"></i><br />TOP </a></li>
 		</ul>
 	</div>
 	<!-- 퀵메뉴 -->
 
 	<!-- 메인 바디 컨테이너 -->
 	<div class="container text-center" id="body_container">
-		<h2>상품 대분류 카테고리 (클릭하고 들어온 카테고리명)</h2>
+		<h2>${ cate[0].BIGCATENAME }</h2>
 		<!-- 카테고리 컨테이너 -->
 		<div class="container text-center" id="small_cate">
-			<div class="row">
-				<div class="col">
-					<a href="#">소분류</a>
-				</div>
-				<div class="col">
-					<a href="#">소분류</a>
-				</div>
-				<div class="col">
-					<a href="#">소분류</a>
-				</div>
-				<div class="col">
-					<a href="#">소분류</a>
-				</div>
-				<div class="col">
-					<a href="#">소분류</a>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col">
-					<a href="#">소분류</a>
-				</div>
-				<div class="col">
-					<a href="#">소분류</a>
-				</div>
-				<div class="col">
-					<a href="#">소분류</a>
-				</div>
-				<div class="col">
-					<a href="#">소분류</a>
-				</div>
-				<div class="col">
-					<a href="#">소분류</a>
-				</div>
+			<div class="row" >
+				<c:forEach var="list" items="${ cate }">
+					<div class="col-3">
+						<span class="smallcate" value="${ list.SMALLCATENUM }">${ list.SMALLCATENAME }</span>
+					</div>
+				</c:forEach>
 			</div>
 		</div>
 		<!-- 상품 정렬 -->
@@ -106,42 +80,24 @@
 			</ul>
 		</div>
 		<!-- 상품 리스트 시작 -->
-		<div class="container" id="product_container">
-			<div class="row">
-				<div class="col-12 col-sm-6 col-md-3">
-					<div class="row">
-						<div class="col-12 col-sm-12 col-md-12">사진</div>
-						<div class="col-12 col-sm-12 col-md-12">담기버튼</div>
-						<div class="col-12 col-sm-12 col-md-12">상품명</div>
-						<div class="col-12 col-sm-12 col-md-12">상품금액</div>
+		<div class="container">
+			<div class="row" id="product_container">
+				<c:forEach var="product" items="${ item }">
+					<div class="col-12 col-sm-6 col-md-3">
+						<div class="row" id="product_four">
+							<div class="col-12 col-12 col-sm-12 col-md-12 carouesl_img" value="${ product.itemNum }">
+								<img alt="상품사진 ^^" src="${ product.itemThumnail }">
+							</div>
+								<div class="col-12 col-sm-12 col-md-12 carouesl_button"><button><i class="bi bi-bag"></i> 담기</button></div>
+
+							<div class="col-12 col-sm-12 col-md-12 carouesl_name" value="${ product.itemNum }">${ product.itemName }</div>
+							<div class="col-12 col-sm-12 col-md-12 carouesl_price" value="${ product.itemNum }"><fmt:formatNumber value="${product.itemPrice}" type="number" groupingUsed="true" />원</div>
+						</div>
 					</div>
-				</div>
-				<div class="col-12 col-sm-6 col-md-3">
-					<div class="row">
-						<div class="col-12 col-sm-12 col-md-12">사진</div>
-						<div class="col-12 col-sm-12 col-md-12">담기버튼</div>
-						<div class="col-12 col-sm-12 col-md-12">상품명</div>
-						<div class="col-12 col-sm-12 col-md-12">상품금액</div>
-					</div>
-				</div>
-				<div class="col-12 col-sm-6 col-md-3">
-					<div class="row">
-						<div class="col-12 col-sm-12 col-md-12">사진</div>
-						<div class="col-12 col-sm-12 col-md-12">담기버튼</div>
-						<div class="col-12 col-sm-12 col-md-12">상품명</div>
-						<div class="col-12 col-sm-12 col-md-12">상품금액</div>
-					</div>
-				</div>
-				<div class="col-12 col-sm-6 col-md-3">
-					<div class="row">
-						<div class="col-12 col-sm-12 col-md-12">사진</div>
-						<div class="col-12 col-sm-12 col-md-12">담기버튼</div>
-						<div class="col-12 col-sm-12 col-md-12">상품명</div>
-						<div class="col-12 col-sm-12 col-md-12">상품금액</div>
-					</div>
-				</div>
+				</c:forEach>
 			</div>
 		</div>
+
 		<!-- 상품 리스트 끝 -->
 		<!-- 상품 목록번호 -->
 		<hr />

@@ -68,7 +68,8 @@
 /* 캐러샐 버튼 */
 .carouesl_button button{
 	border: none;
-	margin-top: 5px;
+	margin-top: 16px;
+	margin-bottom: 8px;
 	width: 98.2%;
 	border-radius: 2px; 
 	box-shadow: 0px 0px 3px #888888;
@@ -80,7 +81,7 @@
 }
 /* 캐러샐 상품명*/
 .carouesl_name {
-	font-size: 22px;
+	font-size: 18px;
 	font-weight: 600;
 	color: #555555;
 	text-align: left;
