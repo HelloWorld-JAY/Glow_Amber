@@ -1,0 +1,23 @@
+package com.java.glowamber.controller.item;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.java.glowamber.model.dto.sampleDTO;
+import com.java.glowamber.service.item.ItemService;
+
+@Controller
+public class ItemController {
+	
+	@Autowired
+	private ItemService itemservice;
+	
+	@RequestMapping("iteminsert")
+	@ResponseBody
+	public void iteminsert(sampleDTO dto) {
+		System.out.println(dto.toString());
+		itemservice.iteminsert(dto);
+	}
+}

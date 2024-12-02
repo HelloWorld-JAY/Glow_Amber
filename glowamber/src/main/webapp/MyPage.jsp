@@ -17,7 +17,7 @@
 	crossorigin="anonymous"></script>
 </head>
 <body>
-	<!-- 헤더 -->
+	<!-- 헤더 --> 
 	<jsp:include page="Header.jsp" />
 	<!-- 헤더 -->
 

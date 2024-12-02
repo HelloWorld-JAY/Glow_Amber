@@ -16,7 +16,7 @@
 	integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
 	crossorigin="anonymous"></script>
 
-</head>
+</head> 
 <body>
 	<!-- 헤더 -->
 	<jsp:include page="Header.jsp" />

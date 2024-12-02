@@ -123,7 +123,7 @@
 							            <col width="*"  />
 					      			</colgroup>
 									<tr>
-										<th>대분류</th>							
+										<th>대분류</th>				
 									</tr>
 								</table>
 							</div>

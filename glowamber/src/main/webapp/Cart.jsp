@@ -32,7 +32,7 @@
 	<!-- 헤더 -->
 	<jsp:include page="Header.jsp" />
 	<!-- 헤더 -->
-
+ 
 	<!-- 바디시작 -->
 
 	<div class="container " id="body_container">
