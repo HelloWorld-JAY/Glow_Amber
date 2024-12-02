@@ -5,47 +5,40 @@
 <head>
 <meta charset="UTF-8">
 <title>JOIN</title>
-<!-- css연결 -->
-<link href="/glowamber/resources/css/Join.css" rel="stylesheet">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script type="text/javascript" src="../resources/js/Join.js"></script>
+<link href="resources/css/Join.css" rel="stylesheet">
+<<<<<<< HEAD
 <!-- 부트스트랩 아이콘CDN -->
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
 	rel="stylesheet">
-<!-- 부트스트랩 CSS -->
+=======
+>>>>>>> origin/main
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
 	rel="stylesheet"
 	integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
 	crossorigin="anonymous">
-<!-- 부트스트랩 js -->
 <script
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
 	integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
 	crossorigin="anonymous"></script>
-
 </head>
 <body>
 	<!-- 헤더 -->
-	<jsp:include page="../headerfooter/Header.jsp" />
+	<jsp:include page="Header.jsp" />
 	<!-- 헤더 -->
 	<!-- 회원가입 입력란 -->
 	<div class="container" id="join_membership">
 		<div>회원가입</div>
 		<hr />
-		<form action="memberJoin" method="post" id="memberJoinAll"
-			name="memberJoinAll">
+		<form action="">
 			<div class="contaianer">
 				<!-- 아이디 입력창 -->
 				<div class="row" id="join_id">
 					<div class="col-3"></div>
 					<div class="col-1">아이디</div>
 					<div class="col-4">
-						<input type="text" placeholder="아이디를 입력하세요" name="memberId"
-							id="memberId">
-							<span id="idCheckResult" style="width:150px;color:red"></span>
+						<input type="text" placeholder="아이디를 입력하세요">
 					</div>
 					<div class="col-4"></div>
 				</div>
@@ -54,8 +47,7 @@
 					<div class="col-3"></div>
 					<div class="col-1">비밀번호</div>
 					<div class="col-4">
-						<input type="password" placeholder="비밀번호를 입력하세요" name="memberPass"
-							id="memberPass">
+						<input type="text" placeholder="비밀번호를 입력하세요">
 					</div>
 					<div class="col-4"></div>
 				</div>
@@ -64,19 +56,7 @@
 					<div class="col-2"></div>
 					<div class="col-2">비밀번호 확인</div>
 					<div class="col-4">
-						<input type="password" placeholder="비밀번호를 한번 더 입력하세요"
-							name="memberPass2" id="memberPass2">
-					</div>
-					<div class="col-4"></div>
-				</div>
-				<!-- 이름 -->
-				<div class="row" id="join_name">
-					<div class="col-2"></div>
-					<div class="col-2">이름</div>
-					<div class="col-4">
-						<input type="text" placeholder="이름을 입력해주세요" name="memberName"
-							id="memberName">
-							
+						<input type="text" placeholder="비밀번호를 한번 더 입력하세요">
 					</div>
 					<div class="col-4"></div>
 				</div>
@@ -84,18 +64,8 @@
 				<div class="row" id="join_email">
 					<div class="col-2"></div>
 					<div class="col-2">이메일</div>
-					<div class="col-4 ">
-						<div class="row email">
-							<div class="col-5">
-								<input type="text" placeholder="이메일을 입력하세요" name="memberEmail"
-									id="memberEmail">
-							</div>
-							<div class="col-2">@</div>
-							<div class="col-5">
-								<input type="combobox">
-							</div>
-
-						</div>
+					<div class="col-4">
+						<input type="text" placeholder="이메일을 입력하세요">
 					</div>
 					<div class="col-4">
 						<button>인증 이메일 받기</button>
@@ -106,8 +76,7 @@
 					<div class="col-2"></div>
 					<div class="col-2">전화번호</div>
 					<div class="col-4">
-						<input type="text" placeholder="숫자를 입력하세요" name="memberTel"
-							id="memberTel">
+						<input type="text" placeholder="숫자를 입력하세요">
 					</div>
 					<div class="col-4"></div>
 				</div>
@@ -210,21 +179,21 @@
 					</div>
 				</div>
 			</div>
-
+			
 		</div>
 		<!-- 가입하기 버튼 -->
-		<div class="row" id="join_button">
-			<div class="col-2"></div>
-			<div class="col-2"></div>
-			<div class="col-4">
-				<button name="confirm" id="confirm">가입하기</button>
+			<div class="row" id="join_button">
+				<div class="col-2"></div>
+				<div class="col-2"></div>
+				<div class="col-4">
+					<button>가입하기</button>
+				</div>
+				<div class="col-4"></div>
 			</div>
-			<div class="col-4"></div>
-		</div>
 	</div>
 
 	<!-- 풋터 -->
-	<jsp:include page="../headerfooter/Footer.jsp" />
+	<jsp:include page="Footer.jsp" />
 	<!-- 풋터 -->
 </body>
 </html>
