@@ -1,5 +1,11 @@
 package com.java.glowamber.model.dto;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.UUID;
+
+import org.springframework.web.multipart.MultipartFile;
+
 import lombok.Data;
 
 @Data
@@ -14,7 +20,8 @@ public class ItemDTO {
 	private Integer itemCost;
 	private Integer itemPrice;
 	private String	itemDate;
-	private String	ItemSupplier;
+	private String	itemSupplier;
 	private	String	itemThumnail;
 	private String	itemDetail;
+	
 }

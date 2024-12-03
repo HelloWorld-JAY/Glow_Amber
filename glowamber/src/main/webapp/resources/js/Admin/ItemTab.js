@@ -1,5 +1,46 @@
+let oEditors=[];
+	smartEditor= function (){
+		nhn.husky.EZCreator.createInIFrame({
+			oAppRef : oEditors
+			, elPlaceHolder : "itemdetail"
+			, sSkinURI : "/glowamber/resources/smarteditor/SmartEditor2Skin.html"
+			, fCreator : "createSEditor2"
+		})
+	}
 $(function(){
+	/* 스마트에디터 출력 */
+	smartEditor()
+	
+	/* 카테고리 출력 */
 	selectBigCate()
+	
+	/* 저장버튼 클릭시 상품 정보 입력 */
+	$('#itemInsertBtn').click(function(){
+		oEditors.getById['itemdetail'].exec("UPDATE_CONTENTS_FIELD",[])
+		
+		ItemParam = {
+						samllCateNum :	$('#samllCateNum').val()
+						,itemName	  :	$('#itemName').val()
+						,itemUnit	  :	$('#itemUnit').val()
+						,itemOrigin	  :	$('#itemOrigin').val()
+						,itemVolume   :	$('#itemVolume').val()
+						,itemAllErgyinfo :	$('#itemAllErgyinfo').val()
+						,itemCost		 :	$('#itemCost').val()
+						,itemPrice		 :	$('#itemPrice').val()
+						,itemSupplier	 :	$('#itemSupplier').val()
+						,itemThumnail	 :	$('#itemThumnail').val()
+						,itemDetail   : $('#itemdetail').val()
+				    }
+		
+		$.ajax({
+			type : 'post'
+			, data : ItemParam
+			, url : '/glowamber/iteminsert'
+			, success : function(){
+				alert('ok')
+			}
+		})
+	})
 	
 	/* 카테고리 등록*/
 	$('#CateInsertBtn').click(function(){
@@ -10,7 +51,7 @@ $(function(){
 			$.ajax({
 				type : 'post'
 				,data : bigcateparam
-				,url  : '../bigcateinsert'
+				,url  : '/glowamber/bigcateinsert'
 				,success : selectBigCate()
 			})
 			
@@ -25,25 +66,25 @@ $(function(){
 			$.ajax({
 				type :'post'
 				,data : smallcateparam
-				,url  :'../smallcateinsert'
+				,url  :'/glowamber/smallcateinsert'
 				,success : function(){
 					$('#SmallCateList').empty()
 					$.ajax({
 						type : 'post'
 						,data: smallcateparam
 						,dataType : 'json'
-						,url  : '../selectsmallcate'
-						,success : 	function (result){
-							$('#SmallCateList').empty();
-							for( scatelist of result ){
-							$('#SmallCateList').append(
-											$('<tr/>').append([
-															$('<td/>').append([$('<input type="hidden" />').val(scatelist['smallCateNum'])
-																			  ,$('<input type="hidden" />').val(scatelist['bigCateNum'])
-																					  					 ,scatelist['smallCateName']])
-															,$('<td/>').append($('<input type="button" class="delete" />').val('x'))]))
-							}
-						}
+						,url  : '/glowamber/selectsmallcate'
+						,success : function (result){
+										$('#SmallCateList').empty();
+											for( smallcate of result ){
+											$('#SmallCateList').append(
+															$('<tr/>').append([
+																			$('<td/>').append([$('<input type="hidden" />').val(smallcate['smallCateNum'])
+																							 ,$('<input type="hidden" />').val(smallcate['bigCateNum'])
+																									  					 ,smallcate['smallCateName']])
+																			,$('<td/>').append($('<input type="button" class="delete" />').val('x'))]))
+											}
+									}
 					})
 				}
 			})
@@ -62,7 +103,7 @@ $(function(){
 			$.ajax({
 				type  : 'post'
 				,data :	UpdateBigCateParam
-				,url  : '../bigcateupdate'
+				,url  : '/glowamber/bigcateupdate'
 				,success : selectBigCate()
 			})
 		}
@@ -77,24 +118,24 @@ $(function(){
 			$.ajax({
 				type  : 'post'
 				,data :	UpdateSmallCateParam
-				,url  : '../smallcateupdate'
+				,url  : '/glowamber/smallcateupdate'
 				,success : function(){
 					$.ajax({
 						type  : 'post'
 						,data :	UpdateSmallCateParam
 						,dataType : 'json'
-						,url  : '../selectsmallcate'
-						,success : function(result){
-							$('#SmallCateList').empty();
-							for( scatelist of result ){
-							$('#SmallCateList').append(
-											$('<tr/>').append([
-															$('<td/>').append([$('<input type="hidden" />').val(scatelist['smallCateNum'])
-																				,$('<input type="hidden" />').val(scatelist['bigCateNum'])
-																					  					 ,scatelist['smallCateName']])
-															,$('<td/>').append($('<input type="button" class="delete" />').val('x'))]))
-							}
-						}
+						,url  : '/glowamber/selectsmallcate'
+						,success :function (result){
+										$('#SmallCateList').empty();
+											for( smallcate of result ){
+											$('#SmallCateList').append(
+															$('<tr/>').append([
+																			$('<td/>').append([$('<input type="hidden" />').val(smallcate['smallCateNum'])
+																							 ,$('<input type="hidden" />').val(smallcate['bigCateNum'])
+																									  					 ,smallcate['smallCateName']])
+																			,$('<td/>').append($('<input type="button" class="delete" />').val('x'))]))
+											}
+									}
 					})
 				}
 			})
@@ -107,7 +148,7 @@ $(function(){
 		$.ajax({
 				type : 'post'
 				,data : {bigCateNum : $(this).parents('tr').find('input').val()}
-				,url  : '../bigcatedelete'
+				,url  : '/glowamber/bigcatedelete'
 				,success : selectBigCate()
 			})
 	})
@@ -121,24 +162,24 @@ $(function(){
 			$.ajax({
 				type : 'post'
 				,data : deleteparam
-				,url  : '../Smallcatedelete'
+				,url  : '/glowamber/Smallcatedelete'
 				,success : function(){
 					$.ajax({
 						type  : 'post'
 						,data :	deleteparam
 						,dataType : 'json'
-						,url  : '../selectsmallcate'
-						,success : function(result){
-							$('#SmallCateList').empty();
-							for( scatelist of result ){
-							$('#SmallCateList').append(
-											$('<tr/>').append([
-															$('<td/>').append([$('<input type="hidden" />').val(scatelist['smallCateNum'])
-																				,$('<input type="hidden" />').val(scatelist['bigCateNum'])
-																					  					 ,scatelist['smallCateName']])
-															,$('<td/>').append($('<input type="button" class="delete" />').val('x'))]))
-							}
-						}
+						,url  : '/glowamber/selectsmallcate'
+						,success : function (result){
+										$('#SmallCateList').empty();
+											for( smallcate of result ){
+											$('#SmallCateList').append(
+															$('<tr/>').append([
+																			$('<td/>').append([$('<input type="hidden" />').val(smallcate['smallCateNum'])
+																							 ,$('<input type="hidden" />').val(smallcate['bigCateNum'])
+																									  					 ,smallcate['smallCateName']])
+																			,$('<td/>').append($('<input type="button" class="delete" />').val('x'))]))
+											}
+									}
 					})
 				}
 			})
@@ -152,19 +193,17 @@ $(function(){
 					$.ajax({
 						type : 'post'
 						,dataType : 'json'
-						,url  : '../selectbigcate'
+						,url  : '/glowamber/selectbigcate'
 						,success : function(result){
-							let bigcatelist = $('#BigCateList')
-							bigcatelist.empty()
-							let selectbigcate = $('#SelectBigCate')
-							selectbigcate.empty()
+							$('#BigCateList').empty()
+							$('#SelectBigCate').empty()
 							for( bigcate of result ){
-								bigcatelist.append(
+								$('#BigCateList').append(
 												$('<tr/>').append([
 																  $('<td/>').append([$('<input type="hidden" />').val(bigcate['bigCateNum'])
 																  					 ,bigcate['bigCateName']])
 																  ,$('<td/>').append($('<input type="button" class="delete" />').val('x'))]))
-								selectbigcate.append($('<option>').val(bigcate['bigCateNum']).text(bigcate['bigCateName']))
+								$('#SelectBigCate').append($('<option>').val(bigcate['bigCateNum']).text(bigcate['bigCateName']))
 							}
 						}
 					})
@@ -180,17 +219,19 @@ $(function(){
 				type : 'post'
 				,data:{bigCateNum:$(this).find('input').val()}
 				,dataType : 'json'
-				,url  : '../selectsmallcate'
+				,url  : '/glowamber/selectsmallcate'
 				,success : function (result){
-					for( smallcate of result ){
-					smallcatelist.append(
-									$('<tr/>').append([
-													$('<td/>').append([$('<input type="hidden" />').val(smallcate['smallCateNum'])
-																	 ,$('<input type="hidden" />').val(smallcate['bigCateNum'])
-																			  					 ,smallcate['smallCateName']])
-													,$('<td/>').append($('<input type="button" class="delete" />').val('x'))]))
-					}
-				}
+								$('#SmallCateList').empty();
+									for( smallcate of result ){
+									$('#SmallCateList').append(
+													$('<tr/>').append([
+																	$('<td/>').append([$('<input type="hidden" />').val(smallcate['smallCateNum'])
+																					 ,$('<input type="hidden" />').val(smallcate['bigCateNum'])
+																							  					 ,smallcate['smallCateName']])
+																	,$('<td/>').append($('<input type="button" class="delete" />').val('x'))]))
+									}
+							}
+				
 			})
 		
 		/* 대분류 번호, 이름 수정 폼에 출력 */
@@ -206,5 +247,9 @@ $(function(){
 		$('#CateNum').val($(this).find('input').val())
 		$('#UpdateCateType').val('소분류')
 		$('#UpdateCateName').val($(this).text())
+		$('#samllCateNum').val($(this).children().first().val())
 	})
+	
+	/* 소분류 출력 */
+	
 })

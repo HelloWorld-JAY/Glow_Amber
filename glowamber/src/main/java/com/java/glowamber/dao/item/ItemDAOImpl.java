@@ -5,7 +5,7 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.java.glowamber.model.dto.sampleDTO;
+import com.java.glowamber.model.dto.ItemDTO;
 
 @Repository
 public class ItemDAOImpl implements ItemDAO{
@@ -14,7 +14,7 @@ public class ItemDAOImpl implements ItemDAO{
 	private SqlSessionTemplate mybatis;
 	
 	@Override
-	public void iteminsert(sampleDTO dto) {
+	public void iteminsert(ItemDTO dto) {
 		mybatis.insert("ItemDAO.ItemInsert",dto);
 	}
 
