@@ -44,8 +44,8 @@
 				<div class="row">
 					<div class="col-2 join_tit text-end align-self-center">ID</div>
 					<div class="col-8 bm text-center">
-						<input type="text" placeholder="아이디를 입력하세요"> 
-						<span id="idCheckResult" style="width: 150px; color: red"></span>
+						<input type="text" placeholder="아이디를 입력하세요" name="memberId" id="memberId"> 
+						<span id="idCheckResult" style="width: 150px; color: red" ></span>
 					</div>
 					<div class="col-2"></div>
 				</div>
@@ -53,7 +53,7 @@
 					<div class="col-2 join_tit text-end align-self-center">비밀번호</div>
 					<div class="col-8 bm text-center">
 
-						<input type="text" placeholder="비밀번호를입력하세요">
+						<input type="text" placeholder="비밀번호를입력하세요" name="memberPass" id="memberPads">
 
 					</div>
 					<div class="col-2"></div>
@@ -63,7 +63,7 @@
 						확인</div>
 					<div class="col-8 bm text-center ">
 
-						<input type="text" placeholder="비밀번호를 다시 입력하세요">
+						<input type="text" placeholder="비밀번호를 다시 입력하세요" name="memberPass2" id="memberPass2">
 
 					</div>
 					<div class="col-2"></div>
@@ -71,7 +71,7 @@
 				<div class="row">
 					<div class="col-2 join_tit text-end align-self-center">이름</div>
 					<div class="col-8 bm text-center">
-						<input type="text" placeholder="이름을 입력하세요">
+						<input type="text" placeholder="이름을 입력하세요" name="memberName" id="">
 					</div>
 					<div class="col-2"></div>
 				</div>
