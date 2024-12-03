@@ -16,12 +16,10 @@ public class MemberServiceImpl implements MemberService {
 	public int memberJoin(MemberDTO dto) {
 		return memberDAO.memberJoin(dto);
 	}
-	//회원가입 아이디 유효성
-	public MemberDTO idCheck(MemberDTO dto) {
-		 
+
+	//아이디 중복 체크
+	public MemberDTO idCheck_Login(MemberDTO dto) {
 		return memberDAO.idCheck(dto);
 	}
-	
-	
 	
 }

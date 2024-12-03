@@ -28,106 +28,97 @@
 
 </head>
 <body>
+
 	<!-- 헤더 -->
 	<jsp:include page="../headerfooter/Header.jsp" />
 	<!-- 헤더 -->
-	<!-- 회원가입 입력란 -->
-	<div class="container" id="join_membership">
-		<div>회원가입</div>
-		<hr />
-		<form action="memberJoin" method="post" id="memberJoinAll"
-			name="memberJoinAll">
-			<div class="contaianer">
-				<!-- 아이디 입력창 -->
-				<div class="row" id="join_id">
-					<div class="col-3"></div>
-					<div class="col-1">아이디</div>
-					<div class="col-4">
-						<input type="text" placeholder="아이디를 입력하세요" name="memberId"
-							id="memberId">
-							<span id="idCheckResult" style="width:150px;color:red"></span>
+
+	<div class='container' id="join_membership">
+		<div class="row">
+			<div class="col-4"></div>
+			<div class="col-4 tit">회원가입</div>
+			<div class="col-4"></div>
+			<hr>
+			<div class="col-2"></div>
+			<div class="col-8">
+				<div class="row">
+					<div class="col-2 join_tit text-end align-self-center">ID</div>
+					<div class="col-8 bm text-center">
+						<input type="text" placeholder="아이디를 입력하세요"> 
+						<span id="idCheckResult" style="width: 150px; color: red"></span>
 					</div>
-					<div class="col-4"></div>
-				</div>
-				<!-- 비밀번호 입력창 -->
-				<div class="row" id="join_pass">
-					<div class="col-3"></div>
-					<div class="col-1">비밀번호</div>
-					<div class="col-4">
-						<input type="password" placeholder="비밀번호를 입력하세요" name="memberPass"
-							id="memberPass">
-					</div>
-					<div class="col-4"></div>
-				</div>
-				<!-- 비밀번호 확인 입력창 -->
-				<div class="row" id="join_repass">
 					<div class="col-2"></div>
-					<div class="col-2">비밀번호 확인</div>
-					<div class="col-4">
-						<input type="password" placeholder="비밀번호를 한번 더 입력하세요"
-							name="memberPass2" id="memberPass2">
-					</div>
-					<div class="col-4"></div>
 				</div>
-				<!-- 이름 -->
-				<div class="row" id="join_name">
+				<div class="row">
+					<div class="col-2 join_tit text-end align-self-center">비밀번호</div>
+					<div class="col-8 bm text-center">
+
+						<input type="text" placeholder="비밀번호를입력하세요">
+
+					</div>
 					<div class="col-2"></div>
-					<div class="col-2">이름</div>
-					<div class="col-4">
-						<input type="text" placeholder="이름을 입력해주세요" name="memberName"
-							id="memberName">
-							
-					</div>
-					<div class="col-4"></div>
 				</div>
+				<div class="row">
+					<div class="col-2 join_tit text-end align-self-center">비밀번호
+						확인</div>
+					<div class="col-8 bm text-center ">
+
+						<input type="text" placeholder="비밀번호를 다시 입력하세요">
+
+					</div>
+					<div class="col-2"></div>
+				</div>
+				<div class="row">
+					<div class="col-2 join_tit text-end align-self-center">이름</div>
+					<div class="col-8 bm text-center">
+						<input type="text" placeholder="이름을 입력하세요">
+					</div>
+					<div class="col-2"></div>
+				</div>
+
 				<!-- 이메일 -->
-				<div class="row" id="join_email">
-					<div class="col-2"></div>
-					<div class="col-2">이메일</div>
-					<div class="col-4 ">
-						<div class="row email">
-							<div class="col-5">
-								<input type="text" placeholder="이메일을 입력하세요" name="memberEmail"
-									id="memberEmail">
-							</div>
-							<div class="col-2">@</div>
-							<div class="col-5">
-								<input type="combobox">
-							</div>
+				<div class="row">
+					<div class="col-2 join_tit text-end align-self-center">E-mail</div>
+					<div class="col-8 em text-center">
 
-						</div>
+
+						<input type="text" placeholder="이메일을 입력하세요"> <span>@
+						</span> <select class="combo">
+							<option>선택하기</option>
+							<option>gmail.com</option>
+							<option>naver.com</option>
+							<option>daum.net</option>
+							<option>hanmail.net</option>
+						</select>
+
+
 					</div>
-					<div class="col-4">
-						<button>인증 이메일 받기</button>
+					<div class="col-2">
+						<button class="ejoin">이메일 인증</button>
 					</div>
 				</div>
-				<!-- 휴대폰 -->
-				<div class="row" id="join_cellphone">
-					<div class="col-2"></div>
-					<div class="col-2">전화번호</div>
-					<div class="col-4">
-						<input type="text" placeholder="숫자를 입력하세요" name="memberTel"
-							id="memberTel">
+				<!-- 이메일 끝-->
+				<div class="row">
+					<div class="col-2 join_tit text-end align-self-center">전화번호</div>
+					<div class="col-8 bm text-center">
+						<input type="text" placeholder="전화번호를 입력하세요">
 					</div>
-					<div class="col-4"></div>
-				</div>
-
-				<!-- 주소 검색 -->
-				<div class="row" id="join_address">
 					<div class="col-2"></div>
-					<div class="col-2">주소</div>
-					<div class="col-4">
-						<button>주소</button>
-					</div>
-					<div class="col-4"></div>
 				</div>
-
+				<div class="row">
+					<div class="col-2 join_tit text-end align-self-center">주소</div>
+					<div class="col-8 bm text-center">
+						<button class="addr_btn">주소 찾기</button>
+					</div>
+					<div class="col-2"></div>
+				</div>
 			</div>
-		</form>
-		<hr />
+		</div>
+
 		<!-- 약관동의 -->
 
 		<div class='container' id="join_agree">
+			<hr />
 			<div class="row">
 				<div class="col-3 text-end">이용약관 동의</div>
 				<div class="col-6">

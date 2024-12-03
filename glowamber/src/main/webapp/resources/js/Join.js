@@ -4,7 +4,7 @@ $(function(){
   //아이디 입력
 $('#confirm').click(function(){
 
- alert("dsfsdfsd");
+ 
     if($.trim($("#memberId").val()) ==''){
     $("#memberId").focus();
     return;
@@ -39,15 +39,17 @@ $('#confirm').click(function(){
 
     
     
-})
+});// 회원가입 정보 입력 끝
     
-    //아이디 유효성검사
+    //아이디 중복체크
+	//일부러극적인 효과를 위해 keyup이벤트를 쓰지만 실제롤 잘 안씀;
 	$('#memberId').keyup(function(){
-        
+          clearTimeout(debounceTimeout); // 이전 타이머를 초기화
+           debounceTimeout = setTimeout(() => {
        $.ajax({
        
           type : 'post'
-          ,url : "idCheck.do"
+          ,url : "idCheck"
           ,data: {memberId:$('#memberId').val()}
           ,contentType:'application/x-www-form-urlencoded;charset=utf-8'
           ,success: function(result){
@@ -55,8 +57,8 @@ $('#confirm').click(function(){
           
           }
        });
-       
-	})
+       }, 300); // 300ms 대기 후 실행
+	})//로그인
 		
 
 

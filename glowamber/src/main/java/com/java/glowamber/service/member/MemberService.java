@@ -6,5 +6,7 @@ public interface MemberService {
 
 	public int memberJoin(MemberDTO dto);
 	
-	public MemberDTO idCheck(MemberDTO dto);
+	public MemberDTO idCheck_Login(MemberDTO dto);
+	
+	
 }

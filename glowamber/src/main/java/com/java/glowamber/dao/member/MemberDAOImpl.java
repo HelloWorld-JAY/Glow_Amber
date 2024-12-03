@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 
 import com.java.glowamber.model.dto.MemberDTO;
 
+
 @Repository
 public class MemberDAOImpl implements MemberDAO {
 
@@ -17,10 +18,16 @@ public class MemberDAOImpl implements MemberDAO {
 		System.out.println("===>  MemberMapper memberInsert() 호출");
 		return mybatis.insert("member.memberInsert", dto);
 	}
-	//유효성 검사
+
 	@Override
-	public MemberDTO idCheck(MemberDTO dto) {
+	public MemberDTO memberLogin(MemberDTO dto) {
+		System.out.println("===> MemberMapper idCheck 호출");
 		return mybatis.selectOne("member.idCheck", dto);
+	}
+	@Override
+	public MemberDTO  idCheck( MemberDTO dto ) {
+		System.out.println("===> MemberMapper idCheck 호출");
+		return mybatis.selectOne("member.idCheck",dto);
 	}
 	
 }
